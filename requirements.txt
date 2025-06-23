@@ -1,0 +1,116 @@
+# ATS Resume Checker - Required Dependencies
+
+# Core dependencies
+flask==2.3.3
+werkzeug==2.3.7
+
+# PDF processing
+PyPDF2==3.0.1
+# Optional: PyMuPDF for better PDF processing
+# pymupdf==1.23.5
+
+# DOCX processing
+python-docx==0.8.11
+# Optional: docx2txt for simpler DOCX processing
+# docx2txt==0.8
+
+# Natural Language Processing (compatible versions for Windows)
+# spacy>=3.4.0,<3.6.0  # Optional - comment out if installation fails
+# Alternative: Use pre-compiled wheels or conda for spacy
+# conda install -c conda-forge spacy
+nltk==3.8.1
+
+# Email handling (smtplib is built-in, removing smtplib2)
+# smtplib2==0.2.1  # Removed - using built-in smtplib
+
+# Data processing and analysis (compatible versions)
+pandas>=1.5.0,<2.1.0
+numpy>=1.21.0,<1.25.0
+
+# Text processing and similarity
+scikit-learn>=1.2.0,<1.4.0
+textstat==0.7.3
+
+# Web scraping and HTTP requests (for future enhancements)
+requests==2.31.0
+beautifulsoup4==4.12.2
+
+# File handling and utilities
+# pathlib2==2.3.7  # Not needed for Python 3.4+, pathlib is built-in
+# python-magic==0.4.27  # Problematic on Windows, using alternative
+
+# Logging and configuration
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Date and time handling
+python-dateutil==2.8.2
+
+# Progress bars and CLI enhancements
+tqdm==4.65.0
+
+# Additional dependencies for enhanced features
+openpyxl==3.1.2  # For Excel export functionality
+xlsxwriter==3.1.9  # Alternative Excel writer
+
+# Performance and monitoring
+psutil==5.9.5  # System resource monitoring
+
+# Security and validation
+email-validator==2.0.0  # Email address validation
+phonenumbers==8.13.20  # Phone number parsing and validation
+
+# Caching (optional but recommended for production)
+flask-caching==2.1.0
+redis==4.6.0  # Optional - for production caching
+
+# Development and testing dependencies (optional)
+# pytest==7.4.2
+# pytest-flask==1.2.0
+# black==23.7.0  # Code formatting
+# flake8==6.0.0  # Linting
+
+# Production deployment (optional)
+# gunicorn==21.2.0  # WSGI server for production
+# eventlet==0.33.3  # Async support
+
+# Database support (for future enhancements)
+# sqlalchemy==2.0.20
+# flask-sqlalchemy==3.0.5
+
+# API and documentation (for future enhancements)
+# flask-restx==1.1.0  # API documentation
+# marshmallow==3.20.1  # Serialization
+click==8.1.7
+
+# Testing (optional, for development)
+pytest==7.4.0
+pytest-cov==4.1.0
+
+# Security and validation
+validators==0.20.0
+bleach==6.0.0
+
+# Performance optimization
+cachetools==5.3.1
+
+# Development and debugging tools (optional)
+black==23.7.0
+flake8==6.0.0
+# mypy==1.5.1  # Can be problematic, install separately if needed
+
+# Additional dependencies for better Windows compatibility
+regex==2023.8.8
+six==1.16.0
+
+# Installation notes:
+# 1. For spaCy model, run after installation:
+#    python -m spacy download en_core_web_sm
+# 
+# 2. If spaCy installation fails, try:
+#    conda install -c conda-forge spacy
+#    or
+#    pip install spacy --no-build-isolation
+#
+# 3. Alternative installation for Windows:
+#    pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.1/en_core_web_sm-3.4.1.tar.gz

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Analysis Results - {{ filename }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .results-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .header h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-banner {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .status-pass {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+        }
+
+        .status-fail {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+
+        .status-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .score-display {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .score-excellent { background: linear-gradient(135deg, #10b981, #059669); }
+        .score-good { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .score-average { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .score-poor { background: linear-gradient(135deg, #ef4444, #dc2626); }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .analysis-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 2px solid #e9ecef;
+        }
+
+        .analysis-card h3 {
+            color: #495057;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .score-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 10px;
+            margin: 0.5rem 0;
+            overflow: hidden;
+        }
+
+        .score-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.8s ease;
+        }
+
+        .recommendations {
+            background: #f8f9ff;
+            border-radius: 15px;
+            padding: 2rem;
+            border: 2px solid #e8ebff;
+            margin-bottom: 2rem;
+        }
+
+        .recommendations h2 {
+            color: #495057;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .recommendation-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .keywords-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .keywords-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 1.5rem;
+        }
+
+        .keywords-card h3 {
+            margin-bottom: 1rem;
+            color: #495057;
+        }
+
+        .keyword-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0.2rem;
+        }
+
+        .missing-keyword {
+            background: #ef4444;
+        }
+
+        .file-info {
+            background: #e8f4fd;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .improvement-guide {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .improvement-guide h2 {
+            color: #856404;
+            margin-bottom: 1.5rem;
+        }
+
+        .improvement-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .congrats-message {
+            background: #d4edda;
+            border: 2px solid #c3e6cb;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .congrats-message h2 {
+            color: #155724;
+            margin-bottom: 1rem;
+        }
+
+        /* Intelligent Agent Styles */
+        .agent-analysis {
+            border: 2px solid #667eea;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 100%);
+            margin-bottom: 2rem;
+        }
+
+        .agent-analysis h2 {
+            background: #667eea;
+            color: white;
+            margin: -2rem -2rem 1.5rem -2rem;
+            padding: 1rem 2rem;
+            border-radius: 13px 13px 0 0;
+        }
+
+        .agent-section {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .agent-section h3 {
+            color: #4a5568;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .keywords-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .keyword {
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .keyword.found {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .keyword.missing {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .match-score {
+            text-align: center;
+        }
+
+        .score-circle {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        .agent-rec {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border-left: 4px solid #ffc107;
+            color: #856404;
+        }
+
+        @media (max-width: 768px) {
+            .results-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .analysis-grid, .keywords-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .score-circle {
+                width: 120px;
+                height: 120px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="results-card">
+            <div class="header">
+                <h1>📊 Resume Analysis Results</h1>
+                <p>Analysis for: <strong>{{ filename }}</strong></p>
+            </div>
+
+            <!-- File Information -->
+            <div class="file-info">
+                <strong>📄 File Details:</strong>
+                {% if user_name %}Name: {{ user_name }} | {% endif %}
+                Category: {{ job_category.title() }} | 
+                Size: {{ file_size_mb }}MB | 
+                Processing Time: {{ processing_time }}s
+            </div>
+
+            <!-- ATS Status Banner -->
+            {% if passed_ats %}
+                <div class="status-banner status-pass">
+                    <div class="status-icon">🎉</div>
+                    <div>Congratulations! Your resume is ATS-friendly!</div>
+                    <div style="font-size: 1rem; margin-top: 0.5rem; opacity: 0.9;">
+                        Your resume scored {{ ats_score }}/100 and meets ATS requirements.
+                    </div>
+                </div>
+            {% else %}
+                <div class="status-banner status-fail">
+                    <div class="status-icon">⚠️</div>
+                    <div>Your resume needs improvement for ATS compatibility</div>
+                    <div style="font-size: 1rem; margin-top: 0.5rem; opacity: 0.9;">
+                        Your resume scored {{ ats_score }}/100. Follow the guide below to improve.
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- Score Display -->
+            <div class="score-display">
+                <div class="score-circle 
+                    {% if ats_score >= 85 %}score-excellent
+                    {% elif ats_score >= 70 %}score-good
+                    {% elif ats_score >= 55 %}score-average
+                    {% else %}score-poor
+                    {% endif %}">
+                    {{ ats_score }}/100
+                </div>
+                <p>
+                    {% if ats_score >= 85 %}Excellent ATS Compatibility
+                    {% elif ats_score >= 70 %}Good ATS Compatibility
+                    {% elif ats_score >= 55 %}Average ATS Compatibility
+                    {% else %}Poor ATS Compatibility
+                    {% endif %}
+                </p>
+            </div>
+
+            <!-- Detailed Analysis -->
+            <div class="analysis-grid">
+                {% if detailed_analysis.format_compatibility %}
+                <div class="analysis-card">
+                    <h3>📋 Format Compatibility</h3>
+                    <div class="score-bar">
+                        {% set format_color = "#ef4444" %}
+                        {% if detailed_analysis.format_compatibility.score >= 70 %}
+                            {% set format_color = "#10b981" %}
+                        {% elif detailed_analysis.format_compatibility.score >= 50 %}
+                            {% set format_color = "#f59e0b" %}
+                        {% endif %}
+                        <div class="score-fill" style="width: {{ detailed_analysis.format_compatibility.score }}%; background: {{ format_color }};"></div>
+                    </div>
+                    <p>{{ detailed_analysis.format_compatibility.score }}/100</p>
+                </div>
+                {% endif %}
+
+                {% if detailed_analysis.keyword_matching %}
+                <div class="analysis-card">
+                    <h3>🔑 Keyword Matching</h3>
+                    <div class="score-bar">
+                        {% set keyword_color = "#ef4444" %}
+                        {% if detailed_analysis.keyword_matching.score >= 70 %}
+                            {% set keyword_color = "#10b981" %}
+                        {% elif detailed_analysis.keyword_matching.score >= 50 %}
+                            {% set keyword_color = "#f59e0b" %}
+                        {% endif %}
+                        <div class="score-fill" style="width: {{ detailed_analysis.keyword_matching.score | int }}%; background-color: {{ keyword_color }};"></div>
+                    </div>
+                    <p>{{ detailed_analysis.keyword_matching.score }}/100</p>
+                </div>
+                {% endif %}
+
+                {% if detailed_analysis.readability %}
+                <div class="analysis-card">
+                    <h3>📝 Readability</h3>
+                    <div class="score-bar">
+                        {% set readability_color = "#ef4444" %}
+                        {% if detailed_analysis.readability.score >= 70 %}
+                            {% set readability_color = "#10b981" %}
+                        {% elif detailed_analysis.readability.score >= 50 %}
+                            {% set readability_color = "#f59e0b" %}
+                        {% endif %}
+                        <div class="score-fill" style="width: {{ detailed_analysis.readability.score }}%; background: {{ readability_color }};"></div>
+                    </div>
+                    <p>{{ detailed_analysis.readability.score }}/100</p>
+                </div>
+                {% endif %}
+
+                {% if detailed_analysis.contact_information %}
+                <div class="analysis-card">
+                    <h3>📞 Contact Information</h3>
+                    <div class="score-bar">
+                        {% set contact_color = "#ef4444" %}
+                        {% if detailed_analysis.contact_information.score >= 70 %}
+                            {% set contact_color = "#10b981" %}
+                        {% elif detailed_analysis.contact_information.score >= 50 %}
+                            {% set contact_color = "#f59e0b" %}
+                        {% endif %}
+                        <div class="score-fill" style="width: {{ detailed_analysis.contact_information.score }}%; background: {{ contact_color }};"></div>
+                    </div>
+                    <p>{{ detailed_analysis.contact_information.score }}/100</p>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Keywords Analysis -->
+            {% if detailed_analysis.found_keywords or detailed_analysis.missing_keywords %}
+            <div class="keywords-section">
+                {% if detailed_analysis.found_keywords %}
+                <div class="keywords-card">
+                    <h3>✅ Found Keywords ({{ detailed_analysis.found_keywords|length }})</h3>
+                    {% for keyword in detailed_analysis.found_keywords[:10] %}
+                        <span class="keyword-tag">{{ keyword }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if detailed_analysis.missing_keywords %}
+                <div class="keywords-card">
+                    <h3>❌ Missing Keywords ({{ detailed_analysis.missing_keywords|length }})</h3>
+                    {% for keyword in detailed_analysis.missing_keywords[:10] %}
+                        <span class="keyword-tag missing-keyword">{{ keyword }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            <!-- Success Message or Improvement Guide -->
+            {% if passed_ats %}
+                <div class="congrats-message">
+                    <h2>🎉 Excellent Work!</h2>
+                    <p>Your resume is well-optimized for ATS systems and should pass through most applicant tracking systems successfully. Here are some additional tips to maintain your competitive edge:</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>Keep your resume updated with latest skills and experiences</li>
+                        <li>Customize keywords for each specific job application</li>
+                        <li>Regularly review and update your contact information</li>
+                        <li>Consider adding relevant certifications or recent projects</li>
+                    </ul>
+                </div>
+            {% else %}
+                <div class="improvement-guide">
+                    <h2>💡 How to Improve Your Resume</h2>
+                    <p>Follow these recommendations to make your resume more ATS-friendly:</p>
+                    
+                    {% if detailed_analysis.recommendations %}
+                        {% for recommendation in detailed_analysis.recommendations %}
+                        <div class="improvement-item">
+                            <strong>📝 {{ recommendation }}</strong>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="improvement-item">
+                        <strong>🔍 Add Missing Keywords:</strong> Include relevant keywords from the missing keywords list above in your experience, skills, or summary sections.
+                    </div>
+                    
+                    <div class="improvement-item">
+                        <strong>📋 Simplify Formatting:</strong> Use standard fonts, avoid images/graphics, and stick to simple bullet points and clear section headers.
+                    </div>
+                    
+                    <div class="improvement-item">
+                        <strong>📞 Contact Information:</strong> Ensure your email, phone number, and LinkedIn profile are clearly visible at the top of your resume.
+                    </div>
+                </div>            {% endif %}
+
+            <!-- Intelligent Agent Analysis -->
+            {% if detailed_analysis.intelligent_agent %}
+            <div class="recommendations agent-analysis">
+                <h2>🤖 AI Agent Analysis</h2>
+                
+                {% if detailed_analysis.intelligent_agent.detected_category %}
+                <div class="agent-section">
+                    <h3>📋 Detected Job Category</h3>
+                    <div class="category-badge">
+                        {{ detailed_analysis.intelligent_agent.detected_category|title }}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if detailed_analysis.intelligent_agent.found_keywords %}
+                <div class="agent-section">
+                    <h3>✅ Relevant Keywords Found</h3>
+                    <div class="keywords-grid">
+                        {% for keyword in detailed_analysis.intelligent_agent.found_keywords %}
+                        <span class="keyword found">{{ keyword }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if detailed_analysis.intelligent_agent.missing_keywords %}
+                <div class="agent-section">
+                    <h3>⚠️ Missing Keywords</h3>
+                    <div class="keywords-grid">
+                        {% for keyword in detailed_analysis.intelligent_agent.missing_keywords[:8] %}
+                        <span class="keyword missing">{{ keyword }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if detailed_analysis.intelligent_agent.keyword_match_percentage %}
+                <div class="agent-section">
+                    <h3>📊 Keyword Match Score</h3>
+                    <div class="match-score">
+                        <div class="score-circle">
+                            {{ detailed_analysis.intelligent_agent.keyword_match_percentage }}%
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                
+                {% if detailed_analysis.agent_recommendations %}
+                <div class="agent-section">
+                    <h3>💡 AI Recommendations</h3>
+                    {% for recommendation in detailed_analysis.agent_recommendations %}
+                    <div class="recommendation-item agent-rec">
+                        {{ recommendation }}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            <!-- Recommendations Section -->
+            {% if detailed_analysis.recommendations %}
+            <div class="recommendations">
+                <h2>💡 Specific Recommendations</h2>
+                {% for recommendation in detailed_analysis.recommendations %}
+                <div class="recommendation-item">
+                    {{ recommendation }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Action Buttons -->
+            <div class="actions">
+                <a href="/" class="btn">📤 Upload Another Resume</a>
+                <a href="/dashboard" class="btn btn-secondary">📊 View Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animate score bars
+        window.addEventListener('load', () => {
+            const scoreFills = document.querySelectorAll('.score-fill');
+            scoreFills.forEach(fill => {
+                const width = fill.style.width;
+                fill.style.width = '0%';
+                setTimeout(() => {
+                    fill.style.width = width;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "filename": "White_Pink_Simple_Data_Scientist_Analyst_CV_Resume.pdf",
+  "user_name": "I'm a professional data scientist who",
+  "user_email": "hello@reallygreatsite.com",
+  "job_category": "data_scientist",
+  "file_size_mb": 0.4,
+  "resume_text": "I'm a professional data scientist who\nhas responsibilities in supporting sales\nand marketing teams with insights\ngained from analyzing company data.About Me\nEducation\nBORCELLE UNIVERSITY\nBachelor of Science in M athem atics\nGPA : 3.49\nExperiences\nIngoude Company\nDATA SCIENTIST \nIdentify opportunities for leveraging\ncompany data to drive business solutions\nMine and analyze data from company\ndatabases to drive optimization \nAssess the effectiveness and accuracy of new\ndata sources and data gathering techniques\nDevelop custom data models and algorithms\nto apply to data sets\nPaucek and Lage\nDATA SCIENTIST\nUse predictive modeling to increase and\noptimize business outcomes\nDevelop company A/B testing framework\nand test model quality\nDevelop processes and tools to monitor and\nanalyze model performance and data\naccuracy(2013-2017)\n(2018-2019)\n(2019-now)Problem-solving skills\nExperience using statistical computer\nlanguages\nAdvanced statistical techniques and\nconcepts\nCoding knowledge\nStrong communicationsSkills\n+123-456-7890\nhello@reallygreatsite.com\nwww.reallygreatsite.com\n123 Anywhere Street., Any CityContactMargarita Perez\nData Scientist\n",
+  "ats_score": 21,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 56.4,
+    "word_count": 148,
+    "recommendations": [
+      "Include more relevant keywords. Missing: Python, SQL, machine learning",
+      "Expand your resume content - add more details about your experience"
+    ],
+    "found_keywords": [
+      "team",
+      "problem-solving",
+      "database"
+    ],
+    "missing_keywords": [
+      "Python",
+      "SQL",
+      "machine learning",
+      "project",
+      "JavaScript",
+      "Java",
+      "React",
+      "Node.js",
+      "API",
+      "Git"
+    ],
+    "job_category": "data_scientist",
+    "format_compatibility": {
+      "score": 100,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 21,
+      "feedback": [
+        "Found 3 relevant keywords"
+      ],
+      "found_keywords": [
+        "team",
+        "problem-solving",
+        "database"
+      ],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "project",
+        "JavaScript"
+      ]
+    },
+    "readability": {
+      "score": 60,
+      "feedback": [
+        "Word count: 148 words"
+      ],
+      "word_count": 148
+    },
+    "structure_organization": {
+      "score": 100,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    }
+  },
+  "processing_time": 0.48,
+  "timestamp": 1750677007.1552784
+}

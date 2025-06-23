@@ -1,0 +1,13 @@
+timestamp,filename,user_name,ats_score,job_category,format_compatibility_score,keyword_matching_score,readability_score,structure_organization_score,contact_information_score,total_recommendations,email_sent,processing_time_seconds
+2025-06-23 13:59:25,Muhammad.pdf,EXPERIENCE,7,general,0,0,0,0,0,0,False,0.7466409206390381
+2025-06-23 14:02:19,Muhammad.pdf,EXPERIENCE,7,project_manager,100,7,60,100,100,0,False,0.7989449501037598
+2025-06-23 14:04:02,Muhammad.pdf,EXPERIENCE,7,general,100,7,60,100,100,0,False,0.9965560436248779
+2025-06-23 14:04:18,Zeeshan_cv_ds.pdf,ZEESHAN,28,general,100,28,60,100,100,0,False,0.9226791858673096
+2025-06-23 14:16:55,zeeshan_c-v.docx,ZEESHAN YOUNUS,0,general,100,0,60,100,100,0,False,0.17516088485717773
+2025-06-23 14:17:38,Zeeshan_cv_ds.pdf,ZEESHAN,28,general,100,28,60,100,100,0,False,1.0070862770080566
+2025-06-23 15:09:25,Zeeshan_cv_ds.pdf,ZEESHAN,28,general,100,28,60,100,100,0,False,2.636779546737671
+2025-06-23 15:11:40,Zeeshan_cv_ds.pdf,ZEESHAN,28,general,100,28,60,100,100,0,False,1.4276692867279053
+2025-06-23 15:19:38,Zeeshan_cv_ds.pdf,ZEESHAN,28,general,100,28,60,100,100,0,False,1.4408788681030273
+2025-06-23 15:40:57,zeeshan_c-v.docx,ZEESHAN YOUNUS,0,general,100,0,60,100,100,0,False,0.2946019172668457
+2025-06-23 15:41:46,zeeshan_c-v.docx,ZEESHAN YOUNUS,0,general,100,0,60,100,100,0,False,0.1565687656402588
+2025-06-23 15:42:20,zeeshan_c-v.docx,ZEESHAN YOUNUS,0,marketing,100,0,60,100,100,0,False,0.11883282661437988

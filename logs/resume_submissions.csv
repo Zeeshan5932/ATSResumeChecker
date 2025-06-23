@@ -1,0 +1,26 @@
+timestamp,filename,user_name,user_email,job_category,file_size_mb,ats_score,passed_ats,email_sent,status
+2025-06-23 13:40:41,zeeshan c-v.docx,,codeanalytics001@gmail.com,general,0,0,False,False,error
+2025-06-23 13:59:25,Muhammad.pdf,EXPERIENCE,codeanalytics001@gmail.com,general,0.274810791015625,7,False,False,completed
+2025-06-23 13:59:26,Muhammad.pdf,,codeanalytics001@gmail.com,general,0,0,False,False,error
+2025-06-23 14:02:19,Muhammad.pdf,EXPERIENCE,codeanalytics001@gmail.com,project_manager,0.274810791015625,7,False,False,completed
+2025-06-23 14:02:19,Muhammad.pdf,,codeanalytics001@gmail.com,project_manager,0,0,False,False,error
+2025-06-23 14:04:02,Muhammad.pdf,EXPERIENCE,codeanalytics001@gmail.com,general,0.274810791015625,7,False,False,completed
+2025-06-23 14:04:02,Muhammad.pdf,,codeanalytics001@gmail.com,general,0,0,False,False,error
+2025-06-23 14:04:18,Zeeshan_cv_ds.pdf,ZEESHAN,codeanalytics001@gmail.com,general,0.20723628997802734,28,False,False,completed
+2025-06-23 14:04:18,Zeeshan cv ds.pdf,,codeanalytics001@gmail.com,general,0,0,False,False,error
+2025-06-23 14:16:55,zeeshan_c-v.docx,ZEESHAN YOUNUS,codeanalytics001@gmail.com,general,0.1279163360595703,0,False,False,completed
+2025-06-23 14:16:55,zeeshan c-v.docx,,codeanalytics001@gmail.com,general,0,0,False,False,error
+2025-06-23 14:17:38,Zeeshan_cv_ds.pdf,ZEESHAN,codeanalytics001@gmail.com,general,0.20723628997802734,28,False,False,completed
+2025-06-23 14:17:38,Zeeshan cv ds.pdf,,codeanalytics001@gmail.com,general,0,0,False,False,error
+2025-06-23 15:09:25,Zeeshan_cv_ds.pdf,ZEESHAN,zeeshanoffical01@gmail.com0304,general,0.20723628997802734,28,False,False,completed
+2025-06-23 15:09:26,Zeeshan cv ds.pdf,,,general,0,0,False,False,error
+2025-06-23 15:11:40,Zeeshan_cv_ds.pdf,ZEESHAN,zeeshanoffical01@gmail.com0304,general,0.20723628997802734,28,False,False,completed
+2025-06-23 15:11:40,Zeeshan cv ds.pdf,,,general,0,0,False,False,error
+2025-06-23 15:19:38,Zeeshan_cv_ds.pdf,ZEESHAN,codeanalytics001@gmail.com,general,0.20723628997802734,28,False,False,completed
+2025-06-23 15:19:38,Zeeshan cv ds.pdf,,codeanalytics001@gmail.com,general,0,0,False,False,error
+2025-06-23 15:40:57,zeeshan_c-v.docx,ZEESHAN YOUNUS,codeanalytics001@gmail.com,general,0.1279163360595703,0,False,False,completed
+2025-06-23 15:40:57,zeeshan c-v.docx,,codeanalytics001@gmail.com,general,0,0,False,False,error
+2025-06-23 15:41:46,zeeshan_c-v.docx,ZEESHAN YOUNUS,zeeshanoffical01@gmail.com,general,0.1279163360595703,0,False,False,completed
+2025-06-23 15:41:46,zeeshan c-v.docx,,,general,0,0,False,False,error
+2025-06-23 15:42:20,zeeshan_c-v.docx,ZEESHAN YOUNUS,codeanalytics001@gmail.com,marketing,0.1279163360595703,0,False,False,completed
+2025-06-23 15:42:20,zeeshan c-v.docx,,codeanalytics001@gmail.com,marketing,0,0,False,False,error

@@ -1,0 +1,73 @@
+{
+  "filename": "zeeshan_c-v.docx",
+  "user_name": "ZEESHAN YOUNUS",
+  "user_email": "zeeshanoffical01@gmail.com",
+  "job_category": "general",
+  "file_size_mb": 0.13,
+  "resume_text": "\nZEESHAN YOUNUS\n\n\n\n\n\n\n\n\n\nCONTACT\n\t         +923046852483\n   \n Email\n            zeeshanoffical01@gmail.com\n              \t\t\t\t\t\t\t\t\t\n\n\nTo take a long-term career-oriented employment to invest all my education Qualification, Professional Experience and to undertake responsibility to widen the scope of learning practically to the optimum benefits of the Organization and entire Development of my career. Thanks.\n\n\n\nFather’s Name\t:\tMuhammad Younus\nDate of Birth\t\t:\t23-05-2003\nCNIC   #                     :\t35302-4941824-9\nDomicile \t\t:\tOkara (Punjab)\nReligion\t\t:\tIslam\nMarital Status\t:          Single\nNationality \t\t:\tPakistani\n\n\n\n\n\n\n\n\n\n       \n\n\n\n\nEnglish\nUrdu \n\t\t\t\t\t\t\t\t\nInternet \nMS. Office (Microsoft word and PowerPoint)\n\n \nGood leadership qualities \nStrong communication skills.\nEnergetic, self-starter, creative and can think with originality.\nExcellent social skills, maturity, leadership, initiative, commonsense.\n\n\n\nBooks Reading\nInternet Surfing\nCricket\n\n\n\nfresh\n",
+  "ats_score": 0,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 48.0,
+    "word_count": 109,
+    "recommendations": [
+      "Include more relevant keywords. Missing: Python, SQL, machine learning",
+      "Expand your resume content - add more details about your experience"
+    ],
+    "found_keywords": [],
+    "missing_keywords": [
+      "Python",
+      "SQL",
+      "machine learning",
+      "project",
+      "team",
+      "problem-solving",
+      "JavaScript",
+      "Java",
+      "React",
+      "Node.js"
+    ],
+    "job_category": "general",
+    "format_compatibility": {
+      "score": 100,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 0,
+      "feedback": [
+        "Found 0 relevant keywords"
+      ],
+      "found_keywords": [],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "project",
+        "team"
+      ]
+    },
+    "readability": {
+      "score": 60,
+      "feedback": [
+        "Word count: 109 words"
+      ],
+      "word_count": 109
+    },
+    "structure_organization": {
+      "score": 100,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    }
+  },
+  "processing_time": 0.1,
+  "timestamp": 1750676295.525216
+}
