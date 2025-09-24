@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ COMPANY_CONFIG.company_name }} - Candidate Emails</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #2d3748;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .controls {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-control {
+            padding: 0.75rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn-success {
+            background: #28a745;
+        }
+
+        .emails-table {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e1e5e9;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-passed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .email-link {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .no-emails {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-link {
+            background: rgba(255,255,255,0.9);
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .flash-messages {
+            margin-bottom: 2rem;
+        }
+
+        .flash-message {
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .flash-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .flash-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .filter-row {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-links">
+        <a href="/" class="nav-link">🏠 Home</a>
+        <a href="/dashboard" class="nav-link">📊 Dashboard</a>
+        <a href="/export-emails" class="nav-link">📁 Export CSV</a>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>📧 {{ COMPANY_CONFIG.company_name }} - Candidate Emails</h1>
+            <p>Manage and view candidate email addresses from CV submissions</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message flash-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">{{ statistics.total_emails }}</div>
+                <div class="stat-label">Total Candidates</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ statistics.passed_screening }}</div>
+                <div class="stat-label">Passed Screening</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ statistics.rejected_screening }}</div>
+                <div class="stat-label">Rejected</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ statistics.average_ats_score }}%</div>
+                <div class="stat-label">Average ATS Score</div>
+            </div>
+        </div>
+
+        <!-- Filters and Controls -->
+        <div class="controls">
+            <h3 style="margin-bottom: 1rem;">Filter Candidates</h3>
+            <form id="filterForm">
+                <div class="filter-row">
+                    <div class="form-group">
+                        <label for="job_category">Job Category</label>
+                        <select name="job_category" id="job_category" class="form-control">
+                            <option value="">All Categories</option>
+                            <option value="software_engineer">Software Engineer</option>
+                            <option value="data_scientist">Data Scientist</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="project_manager">Project Manager</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="screening_result">Screening Result</label>
+                        <select name="screening_result" id="screening_result" class="form-control">
+                            <option value="">All Results</option>
+                            <option value="passed">Passed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="min_ats_score">Min ATS Score</label>
+                        <input type="number" name="min_ats_score" id="min_ats_score" class="form-control" min="0" max="100" placeholder="0-100">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <button type="submit" class="btn">🔍 Filter</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Emails Table -->
+        <div class="emails-table">
+            <h3>Candidate Email Database</h3>
+            {% if emails %}
+                <table id="emailsTable">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Candidate Name</th>
+                            <th>Job Category</th>
+                            <th>ATS Score</th>
+                            <th>Screening Result</th>
+                            <th>Submissions</th>
+                            <th>Last Submission</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for email_data in emails %}
+                        <tr>
+                            <td>
+                                <a href="mailto:{{ email_data.email }}" class="email-link">
+                                    {{ email_data.email }}
+                                </a>
+                            </td>
+                            <td>{{ email_data.candidate_name or "Unknown" }}</td>
+                            <td>{{ (email_data.latest_job_category or "General").title() }}</td>
+                            <td>{{ email_data.latest_ats_score }}%</td>
+                            <td>
+                                <span class="status-badge status-{{ email_data.latest_screening_result }}">
+                                    {{ email_data.latest_screening_result.title() }}
+                                </span>
+                            </td>
+                            <td>{{ email_data.submission_count }}</td>
+                            <td>{{ email_data.last_submission_date[:10] if email_data.last_submission_date else "Unknown" }}</td>
+                            <td>
+                                <button class="btn btn-secondary" onclick="copyEmail('{{ email_data.email }}')">
+                                    📋 Copy
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <div class="no-emails">
+                    <h3>No candidate emails found</h3>
+                    <p>Upload some CVs to start collecting candidate emails automatically.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        // Filter functionality
+        document.getElementById('filterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const params = new URLSearchParams();
+            
+            for (let [key, value] of formData.entries()) {
+                if (value) {
+                    params.append(key, value);
+                }
+            }
+            
+            // Fetch filtered data
+            fetch(`/api/candidate-emails?${params.toString()}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        updateTable(data.emails);
+                    } else {
+                        alert('Filter failed: ' + (data.error || 'Unknown error'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Filter error:', error);
+                    alert('Filter request failed');
+                });
+        });
+
+        function updateTable(emails) {
+            const tbody = document.querySelector('#emailsTable tbody');
+            if (!tbody) return;
+            
+            if (emails.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 2rem;">No candidates match the selected criteria</td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = emails.map(email => `
+                <tr>
+                    <td><a href="mailto:${email.email}" class="email-link">${email.email}</a></td>
+                    <td>${email.candidate_name || "Unknown"}</td>
+                    <td>${(email.latest_job_category || "General").replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}</td>
+                    <td>${email.latest_ats_score}%</td>
+                    <td><span class="status-badge status-${email.latest_screening_result}">${email.latest_screening_result.toUpperCase()}</span></td>
+                    <td>${email.submission_count}</td>
+                    <td>${email.last_submission_date ? email.last_submission_date.substring(0, 10) : "Unknown"}</td>
+                    <td><button class="btn btn-secondary" onclick="copyEmail('${email.email}')">📋 Copy</button></td>
+                </tr>
+            `).join('');
+        }
+
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email).then(function() {
+                alert('Email copied to clipboard: ' + email);
+            }, function(err) {
+                console.error('Could not copy email: ', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = email;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    alert('Email copied to clipboard: ' + email);
+                } catch (err) {
+                    alert('Could not copy email. Email: ' + email);
+                }
+                document.body.removeChild(textArea);
+            });
+        }
+
+        // Auto-refresh every 30 seconds
+        setInterval(function() {
+            location.reload();
+        }, 30000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+{
+  "filename": "test_report.docx",
+  "user_name": "Test Summary",
+  "user_email": "zeeshanoffical01@gmail.comm",
+  "job_category": "general",
+  "file_size_mb": 0.1,
+  "resume_text": "Test Report: Integration Gmail, Google Sheets and Drive\n\nTest Summary\n\nThis report covers validation of the Make.com scenario which:\n\nFetches emails labeled 'Process PDF Receipt'(test folder)\n\nExtracts structured fields (Property, Date, Vendor Name, Expense Category, Amount, Payment Method) via OpenAI\n\n Converts email body or attachments to PDF\n\n Searches for or creates a Google Drive folder named after the sender\n\n Renames the PDF to {Property}-{Date}-{Vendor}-{Category}-{Amount}-{Method}.pdf\n\n Uploads the PDF to Drive\n\n Adds attachment filenames to a Google Sheet\n\n1- In-Scope:\n\nEmail Retrieval\n\nData Extraction\n\nPDF Conversion\n\nDrive Folder Logic\n\nFile Renaming\n\nGoogle Drive Upload\n\nGoogle Sheets Logging\n\n2- Out-of-Scope:\n\nPerformance under high email volume\n\nNon-PDF attachment handling beyond basic upload\n\nAdvanced error recovery beyond simple routing\n\n3. Test Environment\n\nMake.com Account: testing (devmeetings66@gmail.com)\n\nEmail: Gmail IMAP\n\nOpenAI Model: GPT-4o-mini\n\nPDF Service: PDF.co\n\nGoogle Drive & Sheets: via restricted Google API\n\n\n\n\n\n4. Test Scenarios & Results\n\n4.1 Functional Testing:\n\nTC ID\n\nScenario\n\nSteps\n\nExpected\n\nStatus\n\nTC001\n\nFetch single email with label\n\nEmail labeled and scenario run\n\nEmail retrieved\n\nPass\n\nTC002\n\nExtract fields\n\nEmail body with all fields\n\nFields extracted correctly\n\nPass\n\nTC003\n\nHTML-only email conversion\n\nEmail without attachment\n\nPDF generated\n\nPass\n\nTC005\n\nAttachment → new folder\n\nNo existing folder\n\nFolder created & upload as unnamed.pdf\n\nPass\n\nTC006\n\nFull-flow rename\n\nEmail + attachment\n\nCorrect filename uploaded\n\nPass\n\nTC007\n\nLog to Google Sheet\n\nScenario run after upload\n\nSheet row added\n\nPass\n\n\n\n5. Issues:\n\nWhen a new folder is created in Google Drive:\n\nIf the folder does not exist, it is created.\n\nFirst attachment is uploaded as unnamed. Extension (due to the current workflow configuration).\n\nWhen the folder already exists:\n\nIf the folder is found, attachments are renamed and uploaded according to the required format (e.g., Property-Date-Vendor-Amount.pdf).\n\nProblem with multiple attachments:\n\nWhen multiple attachments are involved:\n\nThe first attachment gets uploaded and renamed correctly.\n\nSubsequent attachments (2nd, 3rd, etc.) fail to upload with the correct name. They are uploaded as unnamed. Extension.\n\n\n\n\n\nRoot Cause:\n\nThe workflow is designed to first search for an existing folder.\n\nIf found, the file is renamed and uploaded.\n\nIf the folder does not exist, a new folder is created, and only the first attachment is uploaded as unnamed.\n\nFor multiple attachments, after the first file, the workflow does not correctly apply the renaming logic\n\nSee this I mention:\n\n\n\n6. Conclusion & Recommendations\n\nOverall Status: Pass\n\nKey Findings: All in-scope tests succeeded without defects.\n\nRecommendations:\n- Proceed to production deployment.\n- Consider logging extraction results for audit.\n- Expand attachment type support in future.",
+  "ats_score": 7,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 62.8,
+    "word_count": 412,
+    "recommendations": [
+      "Include more relevant keywords. Missing: Python, SQL, machine learning"
+    ],
+    "found_keywords": [
+      "API"
+    ],
+    "missing_keywords": [
+      "Python",
+      "SQL",
+      "machine learning",
+      "project",
+      "team",
+      "problem-solving",
+      "JavaScript",
+      "Java",
+      "React",
+      "Node.js"
+    ],
+    "job_category": "general",
+    "format_compatibility": {
+      "score": 100,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 7,
+      "feedback": [
+        "Found 1 relevant keywords"
+      ],
+      "found_keywords": [
+        "API"
+      ],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "project",
+        "team"
+      ]
+    },
+    "readability": {
+      "score": 100,
+      "feedback": [
+        "Word count: 412 words"
+      ],
+      "word_count": 412
+    },
+    "structure_organization": {
+      "score": 100,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    },
+    "intelligent_agent": {
+      "detected_category": "marketing",
+      "category_scores": {
+        "education": 0,
+        "art": 1,
+        "tech": 1,
+        "healthcare": 0,
+        "finance": 1,
+        "marketing": 2,
+        "sales": 0
+      },
+      "found_keywords": [
+        "conversion"
+      ],
+      "missing_keywords": [
+        "marketing",
+        "advertising",
+        "branding",
+        "campaign",
+        "social media",
+        "seo",
+        "content",
+        "digital marketing",
+        "analytics",
+        "lead generation"
+      ],
+      "keyword_match_percentage": 9.1,
+      "recommendations": [
+        "❌ Low keyword match (9.1%). Consider adding more marketing-specific terms.",
+        "📝 Add these important marketing keywords: marketing, advertising, branding, campaign, social media"
+      ],
+      "total_keywords_in_category": 11,
+      "found_keywords_count": 1
+    },
+    "detected_category": "marketing",
+    "agent_recommendations": [
+      "❌ Low keyword match (9.1%). Consider adding more marketing-specific terms.",
+      "📝 Add these important marketing keywords: marketing, advertising, branding, campaign, social media"
+    ]
+  },
+  "processing_time": 0.05,
+  "email_sent": false,
+  "timestamp": 1751980577.6682627
+}

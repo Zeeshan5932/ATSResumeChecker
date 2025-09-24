@@ -20,11 +20,21 @@ try:
     from utils.ats_checker import check_ats, get_detailed_analysis
     from utils.json_logger import log_resume_submission, log_resume_analysis, get_dashboard_data
     from utils.intelligent_agent import IntelligentATSAgent
+    from utils.email_sender import send_ats_notification
+    from utils.company_email_sender import send_recruitment_notification
+    from utils.rejection_email_sender import send_rejection_notification
+    from utils.email_manager import extract_and_store_candidate_email, email_manager
+    from config import evaluate_company_hiring_criteria, get_company_job_requirements, COMPANY_CONFIG
 except ImportError:
     from parser import parse_resume
     from ats_checker import check_ats, get_detailed_analysis
     from json_logger import log_resume_submission, log_resume_analysis, get_dashboard_data
     from intelligent_agent import IntelligentATSAgent
+    from email_sender import send_ats_notification
+    from company_email_sender import send_recruitment_notification
+    from rejection_email_sender import send_rejection_notification
+    from email_manager import extract_and_store_candidate_email, email_manager
+    from config import evaluate_company_hiring_criteria, get_company_job_requirements, COMPANY_CONFIG
 
 from config import FILE_CONFIG
 
@@ -77,7 +87,7 @@ def save_complete_analysis_to_json(filename, analysis_data):
 @app.route('/')
 def index():
     """Main upload page"""
-    return render_template('index.html')
+    return render_template('index.html', COMPANY_CONFIG=COMPANY_CONFIG)
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -137,9 +147,22 @@ def upload_file():
             
             return redirect(url_for('index'))
         
-        # Use provided email or extracted email
-        final_email = user_email if user_email else extracted_email
-          # Perform ATS analysis
+        # Automatically detect and store candidate email from CV text
+        auto_detected_email = extract_and_store_candidate_email(
+            cv_text=resume_text,
+            candidate_name=user_name or "",
+            cv_filename=filename,
+            job_category=job_category,
+            ats_score=0,  # Will be updated later
+            passed_screening=False  # Will be updated later
+        )
+        
+        # Use provided email, then auto-detected email, then extracted email
+        final_email = user_email if user_email else (auto_detected_email if auto_detected_email else extracted_email)
+        
+        logger.info(f"Email resolution: provided={user_email}, auto_detected={auto_detected_email}, extracted={extracted_email}, final={final_email}")
+        
+        # Perform ATS analysis
         ats_score = check_ats(resume_text)
         detailed_analysis = get_detailed_analysis(resume_text, job_category)
         
@@ -157,8 +180,31 @@ def upload_file():
         # Determine if resume passed ATS check
         passed_ats = ats_score >= 75
         
+        # Evaluate against company-specific hiring criteria
+        resume_data = {
+            'ats_score': ats_score,
+            'found_keywords': enhanced_analysis.get('found_keywords', []),
+            'resume_text': resume_text
+        }
+        
+        company_evaluation = evaluate_company_hiring_criteria(resume_data, job_category)
+        
+        # Determine final decision based on company criteria
+        passes_company_screening = company_evaluation['passes_criteria']
+        
         # Calculate processing time
         processing_time = time.time() - start_time
+        
+        # Update stored email with final results
+        if auto_detected_email:
+            email_manager.store_candidate_email(
+                email=auto_detected_email,
+                candidate_name=user_name or "",
+                cv_filename=filename,
+                job_category=job_category,
+                ats_score=ats_score,
+                passed_screening=passes_company_screening
+            )
         
         # Log submission to JSON
         log_resume_submission(
@@ -171,7 +217,7 @@ def upload_file():
             passed_ats=passed_ats,
             status="completed"
         )
-          # Log detailed analysis to JSON
+        # Log detailed analysis to JSON
         log_resume_analysis(
             filename=filename,
             user_name=user_name or "",
@@ -180,7 +226,70 @@ def upload_file():
             detailed_analysis=enhanced_analysis,
             processing_time=processing_time
         )
-          # Save complete analysis to individual JSON file
+        
+        # Send email notification if email is available
+        email_sent = False
+        if final_email and '@' in final_email:
+            try:
+                logger.info(f"Sending recruitment decision email to: {final_email}")
+                
+                # Prepare feedback areas for rejection emails
+                feedback_areas = []
+                company_requirements = get_company_job_requirements(job_category)
+                
+                if company_evaluation['ats_compatibility'] < company_requirements['minimum_ats_score']:
+                    feedback_areas.append("CV format needs improvement for ATS compatibility")
+                
+                if company_evaluation['keyword_relevance'] < 40:
+                    feedback_areas.append(f"Missing key skills/keywords for {job_category} position")
+                
+                if company_evaluation['required_keywords_found'] < company_evaluation['required_keywords_total'] * 0.5:
+                    feedback_areas.append("Professional experience should better highlight relevant skills")
+                
+                if not feedback_areas:
+                    feedback_areas = ["Overall application needs strengthening to meet our current requirements"]
+                
+                # Send appropriate email based on screening result
+                if passes_company_screening:
+                    # Send acceptance email using original function
+                    email_sent = send_recruitment_notification(
+                        candidate_name=user_name or "Valued Candidate",
+                        candidate_email=final_email,
+                        position=job_category,
+                        company_scores=company_evaluation,
+                        passed_screening=True,
+                        feedback_areas=feedback_areas
+                    )
+                else:
+                    # Send enhanced rejection email using new template
+                    email_sent = send_rejection_notification(
+                        candidate_name=user_name or "Valued Candidate",
+                        candidate_email=final_email,
+                        position=job_category,
+                        company_scores=company_evaluation,
+                        feedback_areas=feedback_areas
+                    )
+                
+                if email_sent:
+                    logger.info(f"Recruitment email sent successfully to {final_email}")
+                    if passes_company_screening:
+                        flash(f'Congratulations! Your CV has been approved by {COMPANY_CONFIG["company_name"]}. Next steps have been sent to your email.', 'success')
+                    else:
+                        flash(f'Thank you for your application to {COMPANY_CONFIG["company_name"]}. Detailed feedback has been sent to your email.', 'info')
+                else:
+                    logger.warning(f"Failed to send recruitment email to {final_email}")
+                    flash('Application processed, but we couldn\'t send the email notification. Please check your email address.', 'warning')
+                    
+            except Exception as e:
+                logger.error(f"Error sending recruitment email: {str(e)}")
+                flash('Application processed, but email notification failed. Please try again or contact HR.', 'warning')
+        else:
+            logger.info("No valid email provided - skipping email notification")
+            if passes_company_screening:
+                flash(f'Congratulations! Your CV has been approved by {COMPANY_CONFIG["company_name"]}.', 'success')
+            else:
+                flash(f'Thank you for your application to {COMPANY_CONFIG["company_name"]}. Please review the feedback below.', 'info')
+        # Save complete analysis to individual JSON file
         save_complete_analysis_to_json(filename, {
             'filename': filename,
             'user_name': user_name,
@@ -191,7 +300,10 @@ def upload_file():
             'ats_score': ats_score,
             'passed_ats': passed_ats,
             'detailed_analysis': enhanced_analysis,
+            'company_evaluation': company_evaluation,
+            'passes_company_screening': passes_company_screening,
             'processing_time': round(processing_time, 2),
+            'email_sent': email_sent,
             'timestamp': time.time()
         })
         
@@ -203,12 +315,17 @@ def upload_file():
         results = {
             'filename': filename,
             'user_name': user_name,
+            'user_email': final_email,
             'ats_score': ats_score,
             'detailed_analysis': enhanced_analysis,
             'job_category': job_category,
             'passed_ats': passed_ats,
+            'company_evaluation': company_evaluation,
+            'passes_company_screening': passes_company_screening,
+            'company_name': COMPANY_CONFIG['company_name'],
             'processing_time': round(processing_time, 2),
-            'file_size_mb': round(file_size_mb, 2)
+            'file_size_mb': round(file_size_mb, 2),
+            'email_sent': email_sent
         }
         
         return render_template('results_new.html', **results)
@@ -301,6 +418,60 @@ def dashboard():
 def agent_test():
     """Test page for the intelligent agent"""
     return render_template('agent_test.html')
+
+@app.route('/candidate-emails')
+def candidate_emails():
+    """View all candidate emails"""
+    try:
+        emails = email_manager.get_all_candidate_emails()
+        statistics = email_manager.get_statistics()
+        return render_template('candidate_emails.html', 
+                             emails=emails, 
+                             statistics=statistics,
+                             COMPANY_CONFIG=COMPANY_CONFIG)
+    except Exception as e:
+        logger.error(f"Candidate emails error: {str(e)}")
+        flash('Unable to load candidate emails', 'error')
+        return redirect(url_for('index'))
+
+@app.route('/api/candidate-emails')
+def api_candidate_emails():
+    """API endpoint to get candidate emails"""
+    try:
+        job_category = request.args.get('job_category')
+        screening_result = request.args.get('screening_result')
+        min_ats_score = request.args.get('min_ats_score', type=int)
+        
+        emails = email_manager.get_emails_by_criteria(
+            job_category=job_category,
+            screening_result=screening_result,
+            min_ats_score=min_ats_score
+        )
+        
+        return jsonify({
+            'success': True,
+            'emails': emails,
+            'total': len(emails)
+        })
+        
+    except Exception as e:
+        logger.error(f"API candidate emails error: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/export-emails')
+def export_emails():
+    """Export candidate emails to CSV"""
+    try:
+        success = email_manager.export_emails_to_csv()
+        if success:
+            flash('Candidate emails exported successfully to data/candidate_emails.csv', 'success')
+        else:
+            flash('Failed to export candidate emails', 'error')
+        return redirect(url_for('candidate_emails'))
+    except Exception as e:
+        logger.error(f"Export emails error: {str(e)}")
+        flash('Export failed: ' + str(e), 'error')
+        return redirect(url_for('candidate_emails'))
 
 @app.route('/compare-job', methods=['POST'])
 def compare_with_job():

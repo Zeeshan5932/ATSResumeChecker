@@ -1027,5 +1027,1783 @@
     "processing_time": 0.43117260932922363,
     "timestamp": "2025-06-23T16:56:19.297408",
     "id": "analysis_1750679779"
+  },
+  {
+    "filename": "Resit_Students.pdf",
+    "user_name": "UNIVERSITY",
+    "ats_score": 0,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 54.0,
+      "word_count": 948,
+      "recommendations": [
+        "Include more relevant keywords. Missing: Python, SQL, machine learning"
+      ],
+      "found_keywords": [],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 100,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 0,
+        "feedback": [
+          "Found 0 relevant keywords"
+        ],
+        "found_keywords": [],
+        "missing_keywords": [
+          "Python",
+          "SQL",
+          "machine learning",
+          "project",
+          "team"
+        ]
+      },
+      "readability": {
+        "score": 80,
+        "feedback": [
+          "Word count: 948 words"
+        ],
+        "word_count": 948
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "education",
+        "category_scores": {
+          "education": 3,
+          "art": 0,
+          "tech": 1,
+          "healthcare": 0,
+          "finance": 0,
+          "marketing": 0,
+          "sales": 0
+        },
+        "found_keywords": [
+          "student",
+          "learning"
+        ],
+        "missing_keywords": [
+          "curriculum",
+          "classroom",
+          "teaching",
+          "lesson",
+          "teacher",
+          "school",
+          "syllabus",
+          "assessment",
+          "pedagogy",
+          "education"
+        ],
+        "keyword_match_percentage": 10.5,
+        "recommendations": [
+          "❌ Low keyword match (10.5%). Consider adding more education-specific terms.",
+          "📝 Add these important education keywords: curriculum, classroom, teaching, lesson, teacher",
+          "📚 Mention curriculum development or educational methodology"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 2
+      },
+      "detected_category": "education",
+      "agent_recommendations": [
+        "❌ Low keyword match (10.5%). Consider adding more education-specific terms.",
+        "📝 Add these important education keywords: curriculum, classroom, teaching, lesson, teacher",
+        "📚 Mention curriculum development or educational methodology"
+      ]
+    },
+    "processing_time": 0.5631134510040283,
+    "timestamp": "2025-06-24T11:41:51.225165",
+    "id": "analysis_1750747311"
+  },
+  {
+    "filename": "pdf_mcqs.pdf",
+    "user_name": "Answer: B",
+    "ats_score": 0,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 44.6,
+      "word_count": 6048,
+      "recommendations": [
+        "Include more relevant keywords. Missing: Python, SQL, machine learning",
+        "Consider condensing your resume - focus on most relevant information",
+        "Ensure contact information (email, phone) is clearly visible"
+      ],
+      "found_keywords": [
+        "React",
+        "Agile"
+      ],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "Node.js",
+        "API"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 90,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 14,
+        "feedback": [
+          "Found 2 relevant keywords"
+        ],
+        "found_keywords": [
+          "React",
+          "Agile"
+        ],
+        "missing_keywords": [
+          "Python",
+          "SQL",
+          "machine learning",
+          "project",
+          "team"
+        ]
+      },
+      "readability": {
+        "score": 40,
+        "feedback": [
+          "Word count: 6048 words"
+        ],
+        "word_count": 6048
+      },
+      "structure_organization": {
+        "score": 90,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 50,
+        "feedback": [
+          "Missing contact information"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "art",
+        "category_scores": {
+          "education": 9,
+          "art": 22,
+          "tech": 5,
+          "healthcare": 5,
+          "finance": 3,
+          "marketing": 1,
+          "sales": 2
+        },
+        "found_keywords": [
+          "art",
+          "media"
+        ],
+        "missing_keywords": [
+          "creative",
+          "design",
+          "visual",
+          "portfolio",
+          "exhibition",
+          "gallery",
+          "photography",
+          "painting",
+          "graphic",
+          "illustration"
+        ],
+        "keyword_match_percentage": 10.5,
+        "recommendations": [
+          "❌ Low keyword match (10.5%). Consider adding more art-specific terms.",
+          "📝 Add these important art keywords: creative, design, visual, portfolio, exhibition",
+          "🎨 Include portfolio or exhibition experience"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 2
+      },
+      "detected_category": "art",
+      "agent_recommendations": [
+        "❌ Low keyword match (10.5%). Consider adding more art-specific terms.",
+        "📝 Add these important art keywords: creative, design, visual, portfolio, exhibition",
+        "🎨 Include portfolio or exhibition experience"
+      ]
+    },
+    "processing_time": 2.223426342010498,
+    "timestamp": "2025-07-07T12:22:25.321152",
+    "id": "analysis_1751872945"
+  },
+  {
+    "filename": "test_report.docx",
+    "user_name": "Test Summary",
+    "ats_score": 7,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 62.8,
+      "word_count": 412,
+      "recommendations": [
+        "Include more relevant keywords. Missing: Python, SQL, machine learning"
+      ],
+      "found_keywords": [
+        "API"
+      ],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 100,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 7,
+        "feedback": [
+          "Found 1 relevant keywords"
+        ],
+        "found_keywords": [
+          "API"
+        ],
+        "missing_keywords": [
+          "Python",
+          "SQL",
+          "machine learning",
+          "project",
+          "team"
+        ]
+      },
+      "readability": {
+        "score": 100,
+        "feedback": [
+          "Word count: 412 words"
+        ],
+        "word_count": 412
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "marketing",
+        "category_scores": {
+          "education": 0,
+          "art": 1,
+          "tech": 1,
+          "healthcare": 0,
+          "finance": 1,
+          "marketing": 2,
+          "sales": 0
+        },
+        "found_keywords": [
+          "conversion"
+        ],
+        "missing_keywords": [
+          "marketing",
+          "advertising",
+          "branding",
+          "campaign",
+          "social media",
+          "seo",
+          "content",
+          "digital marketing",
+          "analytics",
+          "lead generation"
+        ],
+        "keyword_match_percentage": 9.1,
+        "recommendations": [
+          "❌ Low keyword match (9.1%). Consider adding more marketing-specific terms.",
+          "📝 Add these important marketing keywords: marketing, advertising, branding, campaign, social media"
+        ],
+        "total_keywords_in_category": 11,
+        "found_keywords_count": 1
+      },
+      "detected_category": "marketing",
+      "agent_recommendations": [
+        "❌ Low keyword match (9.1%). Consider adding more marketing-specific terms.",
+        "📝 Add these important marketing keywords: marketing, advertising, branding, campaign, social media"
+      ]
+    },
+    "processing_time": 0.049636125564575195,
+    "timestamp": "2025-07-08T18:16:15.601921",
+    "id": "analysis_1751980575"
+  },
+  {
+    "filename": "Zeeshan_cv_ds.pdf",
+    "user_name": "ZEESHAN",
+    "ats_score": 28,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 59.2,
+      "word_count": 175,
+      "recommendations": [
+        "Include more relevant keywords. Missing: SQL, team, problem-solving",
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "Python",
+        "machine learning",
+        "project",
+        "API"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "database",
+        "Git",
+        "Agile"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 100,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 28,
+        "feedback": [
+          "Found 4 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python",
+          "machine learning",
+          "project",
+          "API"
+        ],
+        "missing_keywords": [
+          "SQL",
+          "team",
+          "problem-solving",
+          "JavaScript",
+          "Java"
+        ]
+      },
+      "readability": {
+        "score": 60,
+        "feedback": [
+          "Word count: 175 words"
+        ],
+        "word_count": 175
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "education",
+        "category_scores": {
+          "education": 8,
+          "art": 1,
+          "tech": 8,
+          "healthcare": 0,
+          "finance": 1,
+          "marketing": 0,
+          "sales": 0
+        },
+        "found_keywords": [
+          "school",
+          "learning",
+          "education"
+        ],
+        "missing_keywords": [
+          "curriculum",
+          "classroom",
+          "student",
+          "teaching",
+          "lesson",
+          "teacher",
+          "syllabus",
+          "assessment",
+          "pedagogy",
+          "instructor"
+        ],
+        "keyword_match_percentage": 15.8,
+        "recommendations": [
+          "❌ Low keyword match (15.8%). Consider adding more education-specific terms.",
+          "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+          "📚 Mention curriculum development or educational methodology"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 3
+      },
+      "detected_category": "education",
+      "agent_recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more education-specific terms.",
+        "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+        "📚 Mention curriculum development or educational methodology"
+      ]
+    },
+    "processing_time": 0.7073936462402344,
+    "timestamp": "2025-07-08T18:28:36.895494",
+    "id": "analysis_1751981316"
+  },
+  {
+    "filename": "Zeeshan_cv_ds.pdf",
+    "user_name": "ZEESHAN",
+    "ats_score": 28,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 59.2,
+      "word_count": 175,
+      "recommendations": [
+        "Include more relevant keywords. Missing: SQL, team, problem-solving",
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "Python",
+        "machine learning",
+        "project",
+        "API"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "database",
+        "Git",
+        "Agile"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 100,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 28,
+        "feedback": [
+          "Found 4 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python",
+          "machine learning",
+          "project",
+          "API"
+        ],
+        "missing_keywords": [
+          "SQL",
+          "team",
+          "problem-solving",
+          "JavaScript",
+          "Java"
+        ]
+      },
+      "readability": {
+        "score": 60,
+        "feedback": [
+          "Word count: 175 words"
+        ],
+        "word_count": 175
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "education",
+        "category_scores": {
+          "education": 8,
+          "art": 1,
+          "tech": 8,
+          "healthcare": 0,
+          "finance": 1,
+          "marketing": 0,
+          "sales": 0
+        },
+        "found_keywords": [
+          "school",
+          "learning",
+          "education"
+        ],
+        "missing_keywords": [
+          "curriculum",
+          "classroom",
+          "student",
+          "teaching",
+          "lesson",
+          "teacher",
+          "syllabus",
+          "assessment",
+          "pedagogy",
+          "instructor"
+        ],
+        "keyword_match_percentage": 15.8,
+        "recommendations": [
+          "❌ Low keyword match (15.8%). Consider adding more education-specific terms.",
+          "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+          "📚 Mention curriculum development or educational methodology"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 3
+      },
+      "detected_category": "education",
+      "agent_recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more education-specific terms.",
+        "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+        "📚 Mention curriculum development or educational methodology"
+      ]
+    },
+    "processing_time": 0.23396515846252441,
+    "timestamp": "2025-07-08T18:29:31.717985",
+    "id": "analysis_1751981371"
+  },
+  {
+    "filename": "Muhammad.pdf",
+    "user_name": "EXPERIENCE",
+    "ats_score": 7,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 50.8,
+      "word_count": 135,
+      "recommendations": [
+        "Include more relevant keywords. Missing: Python, SQL, machine learning",
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "team"
+      ],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "project",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "API"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 100,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 7,
+        "feedback": [
+          "Found 1 relevant keywords"
+        ],
+        "found_keywords": [
+          "team"
+        ],
+        "missing_keywords": [
+          "Python",
+          "SQL",
+          "machine learning",
+          "project",
+          "problem-solving"
+        ]
+      },
+      "readability": {
+        "score": 60,
+        "feedback": [
+          "Word count: 135 words"
+        ],
+        "word_count": 135
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "education",
+        "category_scores": {
+          "education": 2,
+          "art": 0,
+          "tech": 0,
+          "healthcare": 0,
+          "finance": 0,
+          "marketing": 0,
+          "sales": 0
+        },
+        "found_keywords": [
+          "school",
+          "education"
+        ],
+        "missing_keywords": [
+          "curriculum",
+          "classroom",
+          "student",
+          "teaching",
+          "lesson",
+          "teacher",
+          "syllabus",
+          "assessment",
+          "pedagogy",
+          "learning"
+        ],
+        "keyword_match_percentage": 10.5,
+        "recommendations": [
+          "❌ Low keyword match (10.5%). Consider adding more education-specific terms.",
+          "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+          "📚 Mention curriculum development or educational methodology"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 2
+      },
+      "detected_category": "education",
+      "agent_recommendations": [
+        "❌ Low keyword match (10.5%). Consider adding more education-specific terms.",
+        "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+        "📚 Mention curriculum development or educational methodology"
+      ]
+    },
+    "processing_time": 0.7792603969573975,
+    "timestamp": "2025-07-08T18:38:04.700498",
+    "id": "analysis_1751981884"
+  },
+  {
+    "filename": "AI_Engineer.pdf.pdf",
+    "user_name": "ZEESHAN",
+    "ats_score": 0,
+    "job_category": "data_scientist",
+    "detailed_analysis": {
+      "overall_score": 47.8,
+      "word_count": 126,
+      "recommendations": [
+        "Include more relevant keywords. Missing: SQL, machine learning, project",
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "Python"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "API"
+      ],
+      "job_category": "data_scientist",
+      "format_compatibility": {
+        "score": 90,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 7,
+        "feedback": [
+          "Found 1 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python"
+        ],
+        "missing_keywords": [
+          "SQL",
+          "machine learning",
+          "project",
+          "team",
+          "problem-solving"
+        ]
+      },
+      "readability": {
+        "score": 60,
+        "feedback": [
+          "Word count: 126 words"
+        ],
+        "word_count": 126
+      },
+      "structure_organization": {
+        "score": 90,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "tech",
+        "category_scores": {
+          "education": 3,
+          "art": 1,
+          "tech": 4,
+          "healthcare": 0,
+          "finance": 2,
+          "marketing": 2,
+          "sales": 0
+        },
+        "found_keywords": [
+          "python",
+          "programming",
+          "developer"
+        ],
+        "missing_keywords": [
+          "sql",
+          "api",
+          "javascript",
+          "machine learning",
+          "java",
+          "react",
+          "node.js",
+          "git",
+          "software",
+          "coding"
+        ],
+        "keyword_match_percentage": 15.8,
+        "recommendations": [
+          "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+          "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+          "💻 Add version control experience (Git, GitHub)"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 3
+      },
+      "detected_category": "tech",
+      "agent_recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+        "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+        "💻 Add version control experience (Git, GitHub)"
+      ]
+    },
+    "processing_time": 0.46430253982543945,
+    "timestamp": "2025-08-17T21:25:01.250552",
+    "id": "analysis_1755447901"
+  },
+  {
+    "filename": "AI_Engineer.pdf.pdf",
+    "user_name": "ZEESHAN",
+    "ats_score": 0,
+    "job_category": "software_engineer",
+    "detailed_analysis": {
+      "overall_score": 47.8,
+      "word_count": 126,
+      "recommendations": [
+        "Include more relevant keywords. Missing: SQL, machine learning, project",
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "Python"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "API"
+      ],
+      "job_category": "software_engineer",
+      "format_compatibility": {
+        "score": 90,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 7,
+        "feedback": [
+          "Found 1 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python"
+        ],
+        "missing_keywords": [
+          "SQL",
+          "machine learning",
+          "project",
+          "team",
+          "problem-solving"
+        ]
+      },
+      "readability": {
+        "score": 60,
+        "feedback": [
+          "Word count: 126 words"
+        ],
+        "word_count": 126
+      },
+      "structure_organization": {
+        "score": 90,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "tech",
+        "category_scores": {
+          "education": 3,
+          "art": 1,
+          "tech": 4,
+          "healthcare": 0,
+          "finance": 2,
+          "marketing": 2,
+          "sales": 0
+        },
+        "found_keywords": [
+          "python",
+          "programming",
+          "developer"
+        ],
+        "missing_keywords": [
+          "sql",
+          "api",
+          "javascript",
+          "machine learning",
+          "java",
+          "react",
+          "node.js",
+          "git",
+          "software",
+          "coding"
+        ],
+        "keyword_match_percentage": 15.8,
+        "recommendations": [
+          "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+          "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+          "💻 Add version control experience (Git, GitHub)"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 3
+      },
+      "detected_category": "tech",
+      "agent_recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+        "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+        "💻 Add version control experience (Git, GitHub)"
+      ]
+    },
+    "processing_time": 0.17658209800720215,
+    "timestamp": "2025-08-17T21:28:44.086485",
+    "id": "analysis_1755448124"
+  },
+  {
+    "filename": "Blue_White_Simple_Teacher_CV.pdf",
+    "user_name": "Click here for",
+    "ats_score": 4,
+    "job_category": "project_manager",
+    "detailed_analysis": {
+      "overall_score": 62.6,
+      "word_count": 553,
+      "recommendations": [
+        "Include more relevant keywords. Missing: Python, SQL, machine learning"
+      ],
+      "found_keywords": [
+        "project",
+        "Git"
+      ],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "API"
+      ],
+      "job_category": "project_manager",
+      "format_compatibility": {
+        "score": 90,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 14,
+        "feedback": [
+          "Found 2 relevant keywords"
+        ],
+        "found_keywords": [
+          "project",
+          "Git"
+        ],
+        "missing_keywords": [
+          "Python",
+          "SQL",
+          "machine learning",
+          "team",
+          "problem-solving"
+        ]
+      },
+      "readability": {
+        "score": 100,
+        "feedback": [
+          "Word count: 553 words"
+        ],
+        "word_count": 553
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "art",
+        "category_scores": {
+          "education": 31,
+          "art": 59,
+          "tech": 5,
+          "healthcare": 0,
+          "finance": 5,
+          "marketing": 0,
+          "sales": 4
+        },
+        "found_keywords": [
+          "creative",
+          "design",
+          "visual",
+          "portfolio",
+          "exhibition",
+          "art",
+          "photography",
+          "painting",
+          "graphic",
+          "aesthetic",
+          "drawing",
+          "media",
+          "digital art"
+        ],
+        "missing_keywords": [
+          "gallery",
+          "illustration",
+          "artistic",
+          "sculpture",
+          "adobe",
+          "photoshop"
+        ],
+        "keyword_match_percentage": 68.4,
+        "recommendations": [],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 13
+      },
+      "detected_category": "art",
+      "agent_recommendations": []
+    },
+    "processing_time": 0.23274755477905273,
+    "timestamp": "2025-08-17T21:41:53.728593",
+    "id": "analysis_1755448913"
+  },
+  {
+    "filename": "sarmad_cv.pdf",
+    "user_name": "Muhammad Sarmad Nadeem",
+    "ats_score": 71,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 88.4,
+      "word_count": 645,
+      "recommendations": [
+        "Great job! Your resume looks well-optimized for ATS systems."
+      ],
+      "found_keywords": [
+        "Python",
+        "SQL",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "API",
+        "database",
+        "Git"
+      ],
+      "missing_keywords": [
+        "machine learning",
+        "React",
+        "Node.js",
+        "Agile"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 100,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 71,
+        "feedback": [
+          "Found 10 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python",
+          "SQL",
+          "project",
+          "team",
+          "problem-solving",
+          "JavaScript",
+          "Java",
+          "API",
+          "database",
+          "Git"
+        ],
+        "missing_keywords": [
+          "machine learning",
+          "React",
+          "Node.js",
+          "Agile"
+        ]
+      },
+      "readability": {
+        "score": 100,
+        "feedback": [
+          "Word count: 645 words"
+        ],
+        "word_count": 645
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "tech",
+        "category_scores": {
+          "education": 5,
+          "art": 22,
+          "tech": 36,
+          "healthcare": 2,
+          "finance": 1,
+          "marketing": 0,
+          "sales": 0
+        },
+        "found_keywords": [
+          "python",
+          "sql",
+          "api",
+          "javascript",
+          "programming",
+          "java",
+          "git",
+          "software",
+          "developer",
+          "database",
+          "framework"
+        ],
+        "missing_keywords": [
+          "machine learning",
+          "react",
+          "node.js",
+          "coding",
+          "algorithm",
+          "backend",
+          "frontend",
+          "devops"
+        ],
+        "keyword_match_percentage": 57.9,
+        "recommendations": [],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 11
+      },
+      "detected_category": "tech",
+      "agent_recommendations": []
+    },
+    "processing_time": 0.22165846824645996,
+    "timestamp": "2025-08-19T10:29:29.809338",
+    "id": "analysis_1755581369"
+  },
+  {
+    "filename": "AI_Engineer.pdf.pdf",
+    "user_name": "ZEESHAN",
+    "ats_score": 0,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 47.8,
+      "word_count": 126,
+      "recommendations": [
+        "Include more relevant keywords. Missing: SQL, machine learning, project",
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "Python"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "API"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 90,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 7,
+        "feedback": [
+          "Found 1 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python"
+        ],
+        "missing_keywords": [
+          "SQL",
+          "machine learning",
+          "project",
+          "team",
+          "problem-solving"
+        ]
+      },
+      "readability": {
+        "score": 60,
+        "feedback": [
+          "Word count: 126 words"
+        ],
+        "word_count": 126
+      },
+      "structure_organization": {
+        "score": 90,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "tech",
+        "category_scores": {
+          "education": 3,
+          "art": 1,
+          "tech": 4,
+          "healthcare": 0,
+          "finance": 2,
+          "marketing": 2,
+          "sales": 0
+        },
+        "found_keywords": [
+          "python",
+          "programming",
+          "developer"
+        ],
+        "missing_keywords": [
+          "sql",
+          "api",
+          "javascript",
+          "machine learning",
+          "java",
+          "react",
+          "node.js",
+          "git",
+          "software",
+          "coding"
+        ],
+        "keyword_match_percentage": 15.8,
+        "recommendations": [
+          "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+          "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+          "💻 Add version control experience (Git, GitHub)"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 3
+      },
+      "detected_category": "tech",
+      "agent_recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+        "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+        "💻 Add version control experience (Git, GitHub)"
+      ]
+    },
+    "processing_time": 0.7878661155700684,
+    "timestamp": "2025-09-13T16:47:56.635687",
+    "id": "analysis_1757764076"
+  },
+  {
+    "filename": "AI_Engineer.pdf.pdf",
+    "user_name": "ZEESHAN",
+    "ats_score": 0,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 47.8,
+      "word_count": 126,
+      "recommendations": [
+        "Include more relevant keywords. Missing: SQL, machine learning, project",
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "Python"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "API"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 90,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 7,
+        "feedback": [
+          "Found 1 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python"
+        ],
+        "missing_keywords": [
+          "SQL",
+          "machine learning",
+          "project",
+          "team",
+          "problem-solving"
+        ]
+      },
+      "readability": {
+        "score": 60,
+        "feedback": [
+          "Word count: 126 words"
+        ],
+        "word_count": 126
+      },
+      "structure_organization": {
+        "score": 90,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "tech",
+        "category_scores": {
+          "education": 3,
+          "art": 1,
+          "tech": 4,
+          "healthcare": 0,
+          "finance": 2,
+          "marketing": 2,
+          "sales": 0
+        },
+        "found_keywords": [
+          "python",
+          "programming",
+          "developer"
+        ],
+        "missing_keywords": [
+          "sql",
+          "api",
+          "javascript",
+          "machine learning",
+          "java",
+          "react",
+          "node.js",
+          "git",
+          "software",
+          "coding"
+        ],
+        "keyword_match_percentage": 15.8,
+        "recommendations": [
+          "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+          "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+          "💻 Add version control experience (Git, GitHub)"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 3
+      },
+      "detected_category": "tech",
+      "agent_recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+        "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+        "💻 Add version control experience (Git, GitHub)"
+      ]
+    },
+    "processing_time": 0.2887001037597656,
+    "timestamp": "2025-09-13T16:58:19.520707",
+    "id": "analysis_1757764699"
+  },
+  {
+    "filename": "AI_Engineer.pdf.pdf",
+    "user_name": "ZEESHAN",
+    "ats_score": 0,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 47.8,
+      "word_count": 126,
+      "recommendations": [
+        "Include more relevant keywords. Missing: SQL, machine learning, project",
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "Python"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "API"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 90,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 7,
+        "feedback": [
+          "Found 1 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python"
+        ],
+        "missing_keywords": [
+          "SQL",
+          "machine learning",
+          "project",
+          "team",
+          "problem-solving"
+        ]
+      },
+      "readability": {
+        "score": 60,
+        "feedback": [
+          "Word count: 126 words"
+        ],
+        "word_count": 126
+      },
+      "structure_organization": {
+        "score": 90,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "tech",
+        "category_scores": {
+          "education": 3,
+          "art": 1,
+          "tech": 4,
+          "healthcare": 0,
+          "finance": 2,
+          "marketing": 2,
+          "sales": 0
+        },
+        "found_keywords": [
+          "python",
+          "programming",
+          "developer"
+        ],
+        "missing_keywords": [
+          "sql",
+          "api",
+          "javascript",
+          "machine learning",
+          "java",
+          "react",
+          "node.js",
+          "git",
+          "software",
+          "coding"
+        ],
+        "keyword_match_percentage": 15.8,
+        "recommendations": [
+          "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+          "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+          "💻 Add version control experience (Git, GitHub)"
+        ],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 3
+      },
+      "detected_category": "tech",
+      "agent_recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+        "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+        "💻 Add version control experience (Git, GitHub)"
+      ]
+    },
+    "processing_time": 0.27847981452941895,
+    "timestamp": "2025-09-13T17:05:55.621285",
+    "id": "analysis_1757765155"
+  },
+  {
+    "filename": "resume_najam_us_saqib.pdf",
+    "user_name": "NAJAM US SAQIB",
+    "ats_score": 50,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 74.0,
+      "word_count": 223,
+      "recommendations": [
+        "Expand your resume content - add more details about your experience"
+      ],
+      "found_keywords": [
+        "SQL",
+        "project",
+        "JavaScript",
+        "Java",
+        "Node.js",
+        "API",
+        "Git"
+      ],
+      "missing_keywords": [
+        "Python",
+        "machine learning",
+        "team",
+        "problem-solving",
+        "React",
+        "database",
+        "Agile"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 100,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 50,
+        "feedback": [
+          "Found 7 relevant keywords"
+        ],
+        "found_keywords": [
+          "SQL",
+          "project",
+          "JavaScript",
+          "Java",
+          "Node.js",
+          "API",
+          "Git"
+        ],
+        "missing_keywords": [
+          "Python",
+          "machine learning",
+          "team",
+          "problem-solving",
+          "React"
+        ]
+      },
+      "readability": {
+        "score": 80,
+        "feedback": [
+          "Word count: 223 words"
+        ],
+        "word_count": 223
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "tech",
+        "category_scores": {
+          "education": 4,
+          "art": 6,
+          "tech": 22,
+          "healthcare": 0,
+          "finance": 3,
+          "marketing": 0,
+          "sales": 0
+        },
+        "found_keywords": [
+          "sql",
+          "api",
+          "javascript",
+          "programming",
+          "java",
+          "node.js",
+          "git",
+          "software",
+          "developer",
+          "frontend"
+        ],
+        "missing_keywords": [
+          "python",
+          "machine learning",
+          "react",
+          "coding",
+          "database",
+          "algorithm",
+          "framework",
+          "backend",
+          "devops"
+        ],
+        "keyword_match_percentage": 52.6,
+        "recommendations": [],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 10
+      },
+      "detected_category": "tech",
+      "agent_recommendations": []
+    },
+    "processing_time": 0.5798563957214355,
+    "timestamp": "2025-09-19T10:10:43.793918",
+    "id": "analysis_1758258643"
+  },
+  {
+    "filename": "sarmad.pdf",
+    "user_name": "Muhammad Sarmad Nadeem",
+    "ats_score": 71,
+    "job_category": "general",
+    "detailed_analysis": {
+      "overall_score": 82.4,
+      "word_count": 835,
+      "recommendations": [
+        "Great job! Your resume looks well-optimized for ATS systems."
+      ],
+      "found_keywords": [
+        "Python",
+        "SQL",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "API",
+        "database",
+        "Git"
+      ],
+      "missing_keywords": [
+        "machine learning",
+        "React",
+        "Node.js",
+        "Agile"
+      ],
+      "job_category": "general",
+      "format_compatibility": {
+        "score": 100,
+        "feedback": [
+          "Good formatting"
+        ]
+      },
+      "keyword_matching": {
+        "score": 71,
+        "feedback": [
+          "Found 10 relevant keywords"
+        ],
+        "found_keywords": [
+          "Python",
+          "SQL",
+          "project",
+          "team",
+          "problem-solving",
+          "JavaScript",
+          "Java",
+          "API",
+          "database",
+          "Git"
+        ],
+        "missing_keywords": [
+          "machine learning",
+          "React",
+          "Node.js",
+          "Agile"
+        ]
+      },
+      "readability": {
+        "score": 80,
+        "feedback": [
+          "Word count: 835 words"
+        ],
+        "word_count": 835
+      },
+      "structure_organization": {
+        "score": 100,
+        "feedback": [
+          "Good structure"
+        ]
+      },
+      "contact_information": {
+        "score": 100,
+        "feedback": [
+          "Contact info found"
+        ]
+      },
+      "intelligent_agent": {
+        "detected_category": "tech",
+        "category_scores": {
+          "education": 5,
+          "art": 26,
+          "tech": 39,
+          "healthcare": 5,
+          "finance": 2,
+          "marketing": 0,
+          "sales": 0
+        },
+        "found_keywords": [
+          "python",
+          "sql",
+          "api",
+          "javascript",
+          "programming",
+          "java",
+          "git",
+          "software",
+          "developer",
+          "database",
+          "framework"
+        ],
+        "missing_keywords": [
+          "machine learning",
+          "react",
+          "node.js",
+          "coding",
+          "algorithm",
+          "backend",
+          "frontend",
+          "devops"
+        ],
+        "keyword_match_percentage": 57.9,
+        "recommendations": [],
+        "total_keywords_in_category": 19,
+        "found_keywords_count": 11
+      },
+      "detected_category": "tech",
+      "agent_recommendations": []
+    },
+    "processing_time": 0.20249104499816895,
+    "timestamp": "2025-09-19T10:13:11.047104",
+    "id": "analysis_1758258791"
   }
 ]

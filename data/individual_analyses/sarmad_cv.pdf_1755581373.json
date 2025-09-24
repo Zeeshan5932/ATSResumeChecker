@@ -1,0 +1,144 @@
+{
+  "filename": "sarmad_cv.pdf",
+  "user_name": "Muhammad Sarmad Nadeem",
+  "user_email": "sarmadnadeem3445@gmail.com",
+  "job_category": "general",
+  "file_size_mb": 0.07,
+  "resume_text": "Muhammad Sarmad Nadeem\nChak 45/G.D P/O T&D Okara — sarmadnadeem3445@gmail.com — +92 3490043739\nlinkedin.com/in/muhammad-sarmad-nadeem-138307203/ — github.com/Sarmad1345\nObjective\nResults-driven Flutter Developer with 1.5 years of experience in designing, developing, and deploying\nmobile applications for both iOS and Android platforms. Proficient in leveraging the Flutter framework\nand Dart programming language to create seamless user experiences and responsive interfaces. Known\nfor strong problem-solving skills and ability to collaborate effectively within cross-functional teams.\nPassionate about utilizing the latest technologies and best practices to drive innovation and deliver high-\nquality solutions. Eager to contribute my expertise and creativity to a dynamic organization focused on\nexcellence and growth.\nExperience\n•Flutter Developer Intern at Jeux Developer for 6 months\n•1 Year Computer Diploma at Degree College Okara\n•7 done months as a Flutter Developer at Software Development Hub Pakistan, Rawalakot, Azad\nKashmir\nTechnologies\nLanguages: C++, C, Java, C#, Python, SQL, PHP, Dart, JavaScript\nSoftware: Microsoft SQL Server, Android Studio, VS Code, Intellij Idea\nCertifications\n•Flutter App Development: Nexskill, Arfa Karim Tower, Lahore\nProficiency in mobile application development with Flutter framework\n•Android Application Development: Nexton, Renala Khurd\nComprehensive skills in creating robust mobile applications for Android platform\n•Office Management, Computer Diploma: Govt. Degree College Okara\nProficiency in essential office administration skills and computer applications\n•Web Programming: UAF Subcampus Depalpur, Okara\nProficiency in developing dynamic and interactive websites\nProjects\n•News App: Developed a dynamic news application using Flutter and REST APIs\nTools Used: Flutter, Dart, REST APIs, Provider, Dio\n•UnStobble App: Satisfaction application with features like songs, habits, and alarm management\nTools Used: Flutter, Dart, REST APIs, Provider, Dio\n•Tahmuh Business & Guest Site Application: Specialized in UI design for managing business\nTools Used: Flutter, Dart, Provider\n•FishPuslse App: A Unique app designed for fish catching enthusiasts, integrating music.\nTools Used: Flutter, Dart,Provider,getX, Firebase\nStatus: Development in progress; soon to be uploaded to the Play Store.\n•Care and Fit Ecommerce App: An ecommerce platform designed for health and fitness prod-\nucts, featuring seamless API integration and a tested mode.\nTools Used: Flutter, Dart, REST APIs, Provider, Dio, Firebase\nStatus: Development and testing completed; soon to be published.\n1\n•Dating App: A modern dating platform designed to connect people, offering both free and\npremium subscription plans. Built with Firebase for real-time data management and seamless user\nexperiences.\nTools Used: Flutter,Dart,Provider,Firebase\nKey Features:\n1.Free and premium subscription models\n2.Real-time messaging and matchmaking\n3.Firebase integration for authentication and database management\n•Driver and Truck Dispatch Appp: A streamlined app designed for efficient dispatching of\ndrivers and trucks, featuring an intuitive and user-friendly UI.\nTools Used: Flutter, Dart, Provider\nStatus: Development and testing completed; soon to be published.\n•KUPFSQLLite : A comprehensive application designed for Hajj booking and managing details,\npowered by SQLite for local data storage and integrated with APIs for seamless functionality.\nTools Used: Flutter, Dart, REST APIs, Provider, http,sqlite\nKey Features:\n1.Hajj booking and management system\n2.SQLite for efficient local data storage\n3.API integration for real-time updates and synchronization\n•Live Tracking Mini App : A lightweight and efficient app for real-time location tracking, featuring\nGoogle Maps integration and API support for seamless functionality.\nTools Used: Flutter, Dart, REST APIs , http, Firebase\nKey Features:\n1.Real-time live tracking using Google Maps\n2.API integration for data synchronization and updates\n3.Minimalistic design for ease of use\nAccomplishments:\n•Completed various final year projects and resking of codecanyon application and bug fixing like\nparkme pro, E-Commerce App,online bus ticketing app, Quiz App, WhatsApp clone UI , Insta\nPage UI, and much more...\nTools Used: Flutter, Dart, Provider, GetX\nEducation History\nUniversity of Agriculture Faisalabad: BS in Computer Science (2020 – 2024)\nGPA: 3.4484/4.0\nCoursework: Computer Architecture, Artificial Intelligence, Networking, Programming Languages (C++,\nJava, Python, C#, PHP, Dart)\nGovt Post Degree College, Okara: FSc Pre-Engineering (2018 – 2020)\nGPA: 659/1000\nCoursework: Physics, Chemistry, Math\nAl-Sadiq Best Way High School, Okara: Matriculation (2016 – 2018)\nGPA: 847/1100\nCoursework: Physics, Chemistry, Math, Biology\n2\n",
+  "ats_score": 71,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 88.4,
+    "word_count": 645,
+    "recommendations": [
+      "Great job! Your resume looks well-optimized for ATS systems."
+    ],
+    "found_keywords": [
+      "Python",
+      "SQL",
+      "project",
+      "team",
+      "problem-solving",
+      "JavaScript",
+      "Java",
+      "API",
+      "database",
+      "Git"
+    ],
+    "missing_keywords": [
+      "machine learning",
+      "React",
+      "Node.js",
+      "Agile"
+    ],
+    "job_category": "general",
+    "format_compatibility": {
+      "score": 100,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 71,
+      "feedback": [
+        "Found 10 relevant keywords"
+      ],
+      "found_keywords": [
+        "Python",
+        "SQL",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "API",
+        "database",
+        "Git"
+      ],
+      "missing_keywords": [
+        "machine learning",
+        "React",
+        "Node.js",
+        "Agile"
+      ]
+    },
+    "readability": {
+      "score": 100,
+      "feedback": [
+        "Word count: 645 words"
+      ],
+      "word_count": 645
+    },
+    "structure_organization": {
+      "score": 100,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    },
+    "intelligent_agent": {
+      "detected_category": "tech",
+      "category_scores": {
+        "education": 5,
+        "art": 22,
+        "tech": 36,
+        "healthcare": 2,
+        "finance": 1,
+        "marketing": 0,
+        "sales": 0
+      },
+      "found_keywords": [
+        "python",
+        "sql",
+        "api",
+        "javascript",
+        "programming",
+        "java",
+        "git",
+        "software",
+        "developer",
+        "database",
+        "framework"
+      ],
+      "missing_keywords": [
+        "machine learning",
+        "react",
+        "node.js",
+        "coding",
+        "algorithm",
+        "backend",
+        "frontend",
+        "devops"
+      ],
+      "keyword_match_percentage": 57.9,
+      "recommendations": [],
+      "total_keywords_in_category": 19,
+      "found_keywords_count": 11
+    },
+    "detected_category": "tech",
+    "agent_recommendations": []
+  },
+  "company_evaluation": {
+    "final_score": 42.1,
+    "ats_compatibility": 71,
+    "keyword_relevance": 9.3,
+    "experience_level": 50,
+    "education_background": 50,
+    "skills_match": 9.3,
+    "passes_criteria": false,
+    "required_keywords_found": 2,
+    "required_keywords_total": 15,
+    "preferred_keywords_found": 0,
+    "preferred_keywords_total": 0,
+    "minimum_ats_score": 60
+  },
+  "passes_company_screening": false,
+  "processing_time": 0.22,
+  "email_sent": true,
+  "timestamp": 1755581373.955829
+}

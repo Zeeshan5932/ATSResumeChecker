@@ -1,0 +1,142 @@
+{
+  "filename": "resume_najam_us_saqib.pdf",
+  "user_name": "NAJAM US SAQIB",
+  "user_email": "saqibali24info@gmail.com",
+  "job_category": "general",
+  "file_size_mb": 0.08,
+  "resume_text": "NAJAM US SAQIB\n+923021105464•saqibali24info@gmail.com•Jawad Avenue, Okara, Punjab, Pakistan•Open to Remote•\nLinkedIn•GitHub•Portfolio\nWeb Developer\nHighly skilled Web Developer with a strong foundation in HTML, CSS, JavaScript, Sass, Tailwind CSS, Node.js,\nExpress.js, MongoDB, MySQL and REST API. Proven experience in designing, developing, and maintaining\ndynamic and responsive web applications. Adept at leveraging front-end and back-end technologies to create\nseamless and user-friendly interfaces. Demonstrated ability to deliver high-quality projects, including portfolio\nwebsites, e-commerce platforms, and web clones. Under graduation in BS Special Education and certifications in\nFrontend Development and Programming in JavaScript from Meta. Committed to continuous learning and staying\nupdated with the latest industry trends to provide innovative solutions. Seeking to contribute technical expertise\nand creativity to a forward-thinking organization.\nProfessional Experience\nEfaida Technologies, Pakistan\nAssociate Software Engineer, OkaraApr 2025 - Present\nCore Competencies\nWeb Development, HTML, CSS, JavaScript, Sass/Scss, Tailwind CSS, Node.js, Express.js, MongoDB, MySQL,\nREST API, Communication skill, Presentattion skill, Redis, Firebase, System Design\nLanguagesEnglish, Urdu\nProjects\nPortfolio Website, Link\nCuberto Website Clone, Link\nArmy Dog Center Pk Website, Link\nKhoji Dog Center Pakistan, Link\nShopping Cart Website, Link\nSSFireWorks Website, Link\nEducation\nPunjab Group of Colleges, Okara, Pakistan, FSc in Pre-Engineering, Aug 2018 - Jun 2020\nUniversity of Okara, Okara, Pakistan, BS in Special Education, Jan 2021 - Jul 2025\nCertifications\nFrontend Development, Meta Sep 2023\nProgramming in Javascript, Meta Dec 2023\n",
+  "ats_score": 50,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 74.0,
+    "word_count": 223,
+    "recommendations": [
+      "Expand your resume content - add more details about your experience"
+    ],
+    "found_keywords": [
+      "SQL",
+      "project",
+      "JavaScript",
+      "Java",
+      "Node.js",
+      "API",
+      "Git"
+    ],
+    "missing_keywords": [
+      "Python",
+      "machine learning",
+      "team",
+      "problem-solving",
+      "React",
+      "database",
+      "Agile"
+    ],
+    "job_category": "general",
+    "format_compatibility": {
+      "score": 100,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 50,
+      "feedback": [
+        "Found 7 relevant keywords"
+      ],
+      "found_keywords": [
+        "SQL",
+        "project",
+        "JavaScript",
+        "Java",
+        "Node.js",
+        "API",
+        "Git"
+      ],
+      "missing_keywords": [
+        "Python",
+        "machine learning",
+        "team",
+        "problem-solving",
+        "React"
+      ]
+    },
+    "readability": {
+      "score": 80,
+      "feedback": [
+        "Word count: 223 words"
+      ],
+      "word_count": 223
+    },
+    "structure_organization": {
+      "score": 100,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    },
+    "intelligent_agent": {
+      "detected_category": "tech",
+      "category_scores": {
+        "education": 4,
+        "art": 6,
+        "tech": 22,
+        "healthcare": 0,
+        "finance": 3,
+        "marketing": 0,
+        "sales": 0
+      },
+      "found_keywords": [
+        "sql",
+        "api",
+        "javascript",
+        "programming",
+        "java",
+        "node.js",
+        "git",
+        "software",
+        "developer",
+        "frontend"
+      ],
+      "missing_keywords": [
+        "python",
+        "machine learning",
+        "react",
+        "coding",
+        "database",
+        "algorithm",
+        "framework",
+        "backend",
+        "devops"
+      ],
+      "keyword_match_percentage": 52.6,
+      "recommendations": [],
+      "total_keywords_in_category": 19,
+      "found_keywords_count": 10
+    },
+    "detected_category": "tech",
+    "agent_recommendations": []
+  },
+  "company_evaluation": {
+    "final_score": 34.1,
+    "ats_compatibility": 50,
+    "keyword_relevance": 4.7,
+    "experience_level": 50,
+    "education_background": 50,
+    "skills_match": 4.7,
+    "passes_criteria": false,
+    "required_keywords_found": 1,
+    "required_keywords_total": 15,
+    "preferred_keywords_found": 0,
+    "preferred_keywords_total": 0,
+    "minimum_ats_score": 60
+  },
+  "passes_company_screening": false,
+  "processing_time": 0.58,
+  "email_sent": true,
+  "timestamp": 1758258648.4929175
+}

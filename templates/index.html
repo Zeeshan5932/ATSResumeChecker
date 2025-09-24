@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATS Resume Checker - Optimize Your Resume</title>
+    <title>{{ COMPANY_CONFIG.company_name }} - CV Screening Portal</title>
     <style>
         * {
             margin: 0;
@@ -274,13 +274,14 @@
 <body>
     <div class="nav-links">
         <a href="/dashboard" class="dashboard-link">📊 Dashboard</a>
+        <a href="/candidate-emails" class="dashboard-link">📧 Candidate Emails</a>
         <a href="/agent-test" class="dashboard-link">🤖 AI Agent Test</a>
     </div>
     
     <div class="container">
         <div class="header">
-            <h1>🚀 ATS Resume Checker</h1>
-            <p>Upload your resume and get instant ATS compatibility analysis</p>
+            <h1>🏢 {{ COMPANY_CONFIG.company_name if COMPANY_CONFIG else "Company" }} CV Screening</h1>
+            <p>Submit your CV for automated screening and evaluation</p>
         </div>
         
         <div class="form-container">
@@ -312,6 +313,15 @@
                         <option value="marketing">Marketing</option>
                         <option value="project_manager">Project Manager</option>
                     </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address (Optional)</label>
+                    <input type="email" name="email" id="email" class="form-control" 
+                           placeholder="Enter your email to receive detailed results">
+                    <small style="color: #666; font-size: 0.9rem; margin-top: 5px; display: block;">
+                        📧 We'll send you a detailed analysis report and personalized recommendations
+                    </small>
                 </div>
                 
                 <button type="submit" class="btn" id="submitBtn">

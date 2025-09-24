@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "created_date": "2025-07-08T18:33:04.016687",
+    "company": "Efaida",
+    "description": "Candidate emails extracted from CV submissions",
+    "total_emails": 4,
+    "last_updated": "2025-09-19T10:13:11.036496"
+  },
+  "emails": [
+    {
+      "email": "zeeshanoffical01@gmail.com",
+      "candidate_name": "ZEESHAN",
+      "first_submission_date": "2025-08-17T21:25:01.124674",
+      "last_submission_date": "2025-09-13T17:05:55.574934",
+      "submission_count": 10,
+      "latest_cv_filename": "AI_Engineer.pdf.pdf",
+      "latest_job_category": "general",
+      "latest_ats_score": 0,
+      "latest_screening_result": "rejected",
+      "source": "cv_extraction",
+      "status": "active"
+    },
+    {
+      "email": "hello@reallygreatsite.com",
+      "candidate_name": "Click here for",
+      "first_submission_date": "2025-08-17T21:41:53.696278",
+      "last_submission_date": "2025-08-17T21:41:53.724155",
+      "submission_count": 2,
+      "latest_cv_filename": "Blue_White_Simple_Teacher_CV.pdf",
+      "latest_job_category": "project_manager",
+      "latest_ats_score": 4,
+      "latest_screening_result": "rejected",
+      "source": "cv_extraction",
+      "status": "active"
+    },
+    {
+      "email": "sarmadnadeem3445@gmail.com",
+      "candidate_name": "Muhammad Sarmad Nadeem",
+      "first_submission_date": "2025-08-19T10:29:29.701295",
+      "last_submission_date": "2025-09-19T10:13:11.036496",
+      "submission_count": 4,
+      "latest_cv_filename": "sarmad.pdf",
+      "latest_job_category": "general",
+      "latest_ats_score": 71,
+      "latest_screening_result": "rejected",
+      "source": "cv_extraction",
+      "status": "active"
+    },
+    {
+      "email": "saqibali24info@gmail.com",
+      "candidate_name": "NAJAM US SAQIB",
+      "first_submission_date": "2025-09-19T10:10:43.696058",
+      "last_submission_date": "2025-09-19T10:10:43.741800",
+      "submission_count": 2,
+      "latest_cv_filename": "resume_najam_us_saqib.pdf",
+      "latest_job_category": "general",
+      "latest_ats_score": 50,
+      "latest_screening_result": "rejected",
+      "source": "cv_extraction",
+      "status": "active"
+    }
+  ]
+}

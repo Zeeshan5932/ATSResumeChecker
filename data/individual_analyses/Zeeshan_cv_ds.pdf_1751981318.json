@@ -1,0 +1,142 @@
+{
+  "filename": "Zeeshan_cv_ds.pdf",
+  "user_name": "ZEESHAN",
+  "user_email": "zeeshanoffical01@gmail.com0304",
+  "job_category": "general",
+  "file_size_mb": 0.21,
+  "resume_text": "ZEESHAN\nEXPERIENCE\nEDUCATION\nSKILLS SUMMARY\nLANGUAGE\nEXPERTISE\nData Analysis\nMachine Learning\nDeep Learning\nModel Deployment\nNatural Language\nProcessing (NLP) 78 %\n81 %A passionate and driven individual\ncurrently pursuing a Bachelor of\nScience in Data Science. Proficient in\nPython and enthusiastic about\nprogramming, with a focus on\nleveraging technology to drive\ninnovation. Positioned at the\nintersection of data and technology,\nwith a keen interest in shaping the\nfuture of Artificial Intelligence.About Me\nzeeshanoffical01@gmail.com0304-6852483Data Scientist | Deep Learning &\nMachine Learning Specialist\nMatric in computer science\n2018-202032/2.R.A OkaraA results-oriented Data Scientist with a proven track record\nof delivering impactful solutions through the application of\nDeep Learning and Machine Learning techniques.\nExperienced in leveraging advanced technologies to\ndevelop innovative projects aimed at solving complex\nproblems. Proficient in developing web applications using\nStreamlit, Flask, and FastAPI\nEnglish\nUrdu Web Developer\nI have basic skills in building websites on WordPress, but\nnothing advanced. However, with some effort, I believe I can\nmanage to create one\nGovt  MC High School\nFSC Pre Engineering\n2020-2022Punjab College, Okara\nData AnalystYOUNAS\nProject Management\n",
+  "ats_score": 28,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 59.2,
+    "word_count": 175,
+    "recommendations": [
+      "Include more relevant keywords. Missing: SQL, team, problem-solving",
+      "Expand your resume content - add more details about your experience"
+    ],
+    "found_keywords": [
+      "Python",
+      "machine learning",
+      "project",
+      "API"
+    ],
+    "missing_keywords": [
+      "SQL",
+      "team",
+      "problem-solving",
+      "JavaScript",
+      "Java",
+      "React",
+      "Node.js",
+      "database",
+      "Git",
+      "Agile"
+    ],
+    "job_category": "general",
+    "format_compatibility": {
+      "score": 100,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 28,
+      "feedback": [
+        "Found 4 relevant keywords"
+      ],
+      "found_keywords": [
+        "Python",
+        "machine learning",
+        "project",
+        "API"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java"
+      ]
+    },
+    "readability": {
+      "score": 60,
+      "feedback": [
+        "Word count: 175 words"
+      ],
+      "word_count": 175
+    },
+    "structure_organization": {
+      "score": 100,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    },
+    "intelligent_agent": {
+      "detected_category": "education",
+      "category_scores": {
+        "education": 8,
+        "art": 1,
+        "tech": 8,
+        "healthcare": 0,
+        "finance": 1,
+        "marketing": 0,
+        "sales": 0
+      },
+      "found_keywords": [
+        "school",
+        "learning",
+        "education"
+      ],
+      "missing_keywords": [
+        "curriculum",
+        "classroom",
+        "student",
+        "teaching",
+        "lesson",
+        "teacher",
+        "syllabus",
+        "assessment",
+        "pedagogy",
+        "instructor"
+      ],
+      "keyword_match_percentage": 15.8,
+      "recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more education-specific terms.",
+        "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+        "📚 Mention curriculum development or educational methodology"
+      ],
+      "total_keywords_in_category": 19,
+      "found_keywords_count": 3
+    },
+    "detected_category": "education",
+    "agent_recommendations": [
+      "❌ Low keyword match (15.8%). Consider adding more education-specific terms.",
+      "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+      "📚 Mention curriculum development or educational methodology"
+    ]
+  },
+  "company_evaluation": {
+    "final_score": 27.5,
+    "ats_compatibility": 28,
+    "keyword_relevance": 4.7,
+    "experience_level": 50,
+    "education_background": 50,
+    "skills_match": 4.7,
+    "passes_criteria": false,
+    "required_keywords_found": 1,
+    "required_keywords_total": 15,
+    "preferred_keywords_found": 0,
+    "preferred_keywords_total": 0,
+    "minimum_ats_score": 60
+  },
+  "passes_company_screening": false,
+  "processing_time": 0.71,
+  "email_sent": false,
+  "timestamp": 1751981318.932302
+}

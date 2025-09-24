@@ -1,0 +1,136 @@
+{
+  "filename": "AI_Engineer.pdf.pdf",
+  "user_name": "ZEESHAN",
+  "user_email": "zeeshanoffical01@gmail.com",
+  "job_category": "software_engineer",
+  "file_size_mb": 0.63,
+  "resume_text": "ZEESHAN\nAI ENGINEER\nzeeshanoffical01@gmail.com\n32/2.R Okara0304-6852483\nSkillsContact\nProgramming: Python, C++\nWeb Development: HTML,\nCSS, Streamlit\nAnalytics: Tableau, ExcelAI/ML/DL: TensorFlow, PyTorch,\nScikit-learn, OpenCV, NLP, LLMsDescription\nEducationAspiring AIEngineerwitha strongfoundation in machine\nlearning, deep learning, and front-end developer Passionate\nabout leveraging AI to solve real-world problems. Proficient in\nPython, TensorFlow, PyTorch, and Streamlit, with hands-on\nexperience in developing AI-powered applications. Seeking an\ninternship to applymyskillsinadynamic environment.\nUniversityof Okara\n BS Data Science – Currently\nSemesterin 5th\nPunjab College\nFSc Pre-Engineering - 2022\nWinner of AI Astronets Hackathon on\nLablab.ai\nParticipated in Skillected Skill Challenge\nto build a chatbotCertificationsBuiltand optimizedAI models for\ncomputer vision, NLP, and predictive\nanalytics.\nDeveloped AI-powered web applications\nand integrated ML models into\ndashboards.(1 year of experience)\nAnalyzed large datasets and created data-\ndriveninsights usingTableau and Excel.Experience\n",
+  "ats_score": 0,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 47.8,
+    "word_count": 126,
+    "recommendations": [
+      "Include more relevant keywords. Missing: SQL, machine learning, project",
+      "Expand your resume content - add more details about your experience"
+    ],
+    "found_keywords": [
+      "Python"
+    ],
+    "missing_keywords": [
+      "SQL",
+      "machine learning",
+      "project",
+      "team",
+      "problem-solving",
+      "JavaScript",
+      "Java",
+      "React",
+      "Node.js",
+      "API"
+    ],
+    "job_category": "software_engineer",
+    "format_compatibility": {
+      "score": 90,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 7,
+      "feedback": [
+        "Found 1 relevant keywords"
+      ],
+      "found_keywords": [
+        "Python"
+      ],
+      "missing_keywords": [
+        "SQL",
+        "machine learning",
+        "project",
+        "team",
+        "problem-solving"
+      ]
+    },
+    "readability": {
+      "score": 60,
+      "feedback": [
+        "Word count: 126 words"
+      ],
+      "word_count": 126
+    },
+    "structure_organization": {
+      "score": 90,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    },
+    "intelligent_agent": {
+      "detected_category": "tech",
+      "category_scores": {
+        "education": 3,
+        "art": 1,
+        "tech": 4,
+        "healthcare": 0,
+        "finance": 2,
+        "marketing": 2,
+        "sales": 0
+      },
+      "found_keywords": [
+        "python",
+        "programming",
+        "developer"
+      ],
+      "missing_keywords": [
+        "sql",
+        "api",
+        "javascript",
+        "machine learning",
+        "java",
+        "react",
+        "node.js",
+        "git",
+        "software",
+        "coding"
+      ],
+      "keyword_match_percentage": 15.8,
+      "recommendations": [
+        "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+        "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+        "💻 Add version control experience (Git, GitHub)"
+      ],
+      "total_keywords_in_category": 19,
+      "found_keywords_count": 3
+    },
+    "detected_category": "tech",
+    "agent_recommendations": [
+      "❌ Low keyword match (15.8%). Consider adding more tech-specific terms.",
+      "📝 Add these important tech keywords: sql, api, javascript, machine learning, java",
+      "💻 Add version control experience (Git, GitHub)"
+    ]
+  },
+  "company_evaluation": {
+    "final_score": 19.2,
+    "ats_compatibility": 0,
+    "keyword_relevance": 5.0,
+    "experience_level": 50,
+    "education_background": 50,
+    "skills_match": 5.0,
+    "passes_criteria": false,
+    "required_keywords_found": 1,
+    "required_keywords_total": 14,
+    "preferred_keywords_found": 0,
+    "preferred_keywords_total": 8,
+    "minimum_ats_score": 75
+  },
+  "passes_company_screening": false,
+  "processing_time": 0.18,
+  "email_sent": true,
+  "timestamp": 1755448127.792472
+}

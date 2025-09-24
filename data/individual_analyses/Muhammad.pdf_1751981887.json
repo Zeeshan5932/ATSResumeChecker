@@ -1,0 +1,135 @@
+{
+  "filename": "Muhammad.pdf",
+  "user_name": "EXPERIENCE",
+  "user_email": "zeeshanoffical01@gmail.comm",
+  "job_category": "general",
+  "file_size_mb": 0.27,
+  "resume_text": "EXPERIENCE\nEDUCATION\nProfessional Objective\nLANGUAGE\nMy Strength\nInterests & HobbiesMUHAMMAD\nHonest\nLoyal\nHardworkingCapable of achieving goals and\nobjectives independently and\nthrough teamwork\nGood written and verbal\ncommunication skillsAbout Me\nshanyounas72@gmail.com0306-8902533\nMatric in General\n1989 OkaraRank: Naib Subedar (Junior commissioned officer)\nTrade: Engineer Work (Welder)\nBattalion: 4-Engineer \nExperience:\n30 years of service in the Pakistan Army\nServing in United Nations (UN) Peacekeeping mission in Serialeon (06-\n2001 to 08-2002)\nServing in Operation Rah-e-Nijat for Peacekeeping in Pakistan\nServing in Operation Zarb-e-Azb for Peacekeeping in Pakistan\nMajor Field Experience:\nExperience in making roads and construction for Pak Army Frontier\nWorks Organization (FWO)English\nUrdu \nGovt  High School 32/2.R.A Okara\nAble to learn and utilize my skills in the\ninterests of the organization. I seek interesting\nwork related to the organization's goalsYOUNAS\nReading books and holy\nquran\nNet Suffering\n",
+  "ats_score": 7,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 50.8,
+    "word_count": 135,
+    "recommendations": [
+      "Include more relevant keywords. Missing: Python, SQL, machine learning",
+      "Expand your resume content - add more details about your experience"
+    ],
+    "found_keywords": [
+      "team"
+    ],
+    "missing_keywords": [
+      "Python",
+      "SQL",
+      "machine learning",
+      "project",
+      "problem-solving",
+      "JavaScript",
+      "Java",
+      "React",
+      "Node.js",
+      "API"
+    ],
+    "job_category": "general",
+    "format_compatibility": {
+      "score": 100,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 7,
+      "feedback": [
+        "Found 1 relevant keywords"
+      ],
+      "found_keywords": [
+        "team"
+      ],
+      "missing_keywords": [
+        "Python",
+        "SQL",
+        "machine learning",
+        "project",
+        "problem-solving"
+      ]
+    },
+    "readability": {
+      "score": 60,
+      "feedback": [
+        "Word count: 135 words"
+      ],
+      "word_count": 135
+    },
+    "structure_organization": {
+      "score": 100,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    },
+    "intelligent_agent": {
+      "detected_category": "education",
+      "category_scores": {
+        "education": 2,
+        "art": 0,
+        "tech": 0,
+        "healthcare": 0,
+        "finance": 0,
+        "marketing": 0,
+        "sales": 0
+      },
+      "found_keywords": [
+        "school",
+        "education"
+      ],
+      "missing_keywords": [
+        "curriculum",
+        "classroom",
+        "student",
+        "teaching",
+        "lesson",
+        "teacher",
+        "syllabus",
+        "assessment",
+        "pedagogy",
+        "learning"
+      ],
+      "keyword_match_percentage": 10.5,
+      "recommendations": [
+        "❌ Low keyword match (10.5%). Consider adding more education-specific terms.",
+        "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+        "📚 Mention curriculum development or educational methodology"
+      ],
+      "total_keywords_in_category": 19,
+      "found_keywords_count": 2
+    },
+    "detected_category": "education",
+    "agent_recommendations": [
+      "❌ Low keyword match (10.5%). Consider adding more education-specific terms.",
+      "📝 Add these important education keywords: curriculum, classroom, student, teaching, lesson",
+      "📚 Mention curriculum development or educational methodology"
+    ]
+  },
+  "company_evaluation": {
+    "final_score": 21.2,
+    "ats_compatibility": 7,
+    "keyword_relevance": 4.7,
+    "experience_level": 50,
+    "education_background": 50,
+    "skills_match": 4.7,
+    "passes_criteria": false,
+    "required_keywords_found": 1,
+    "required_keywords_total": 15,
+    "preferred_keywords_found": 0,
+    "preferred_keywords_total": 0,
+    "minimum_ats_score": 60
+  },
+  "passes_company_screening": false,
+  "processing_time": 0.78,
+  "email_sent": false,
+  "timestamp": 1751981887.2331064
+}

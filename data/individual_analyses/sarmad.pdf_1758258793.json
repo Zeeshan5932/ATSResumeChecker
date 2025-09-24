@@ -1,0 +1,144 @@
+{
+  "filename": "sarmad.pdf",
+  "user_name": "Muhammad Sarmad Nadeem",
+  "user_email": "sarmadnadeem3445@gmail.com",
+  "job_category": "general",
+  "file_size_mb": 0.07,
+  "resume_text": "Muhammad Sarmad Nadeem\nChak 45/G.D P/O T&D Okara — sarmadnadeem3445@gmail.com — +92 3490043739\nLinkedIn — GitHub\nObjective\nResults-driven Flutter Developer with 1.5 years of experience in designing, developing, and deploying\nmobile applications for both iOS and Android platforms. Proficient in leveraging the Flutter framework\nand Dart programming language to create seamless user experiences and responsive interfaces. Known\nfor strong problem-solving skills and ability to collaborate effectively within cross-functional teams.\nPassionate about utilizing the latest technologies and best practices to drive innovation and deliver high-\nquality solutions. Eager to contribute my expertise and creativity to a dynamic organization focused on\nexcellence and growth.\nExperience\n•Flutter Developer Intern at Jeux Developer for 6 months\n•1-Year Computer Diploma at Degree College Okara\n•Worked as a Flutter Developer at Software Development Hub Pakistan, Rawalakot, Azad Kashmir\nfor 7 months\nTechnologies\nLanguages:C++, C, Java, C#, Python, SQL, PHP, Dart, JavaScript\nSoftware:Microsoft SQL Server, Android Studio, VS Code, IntelliJ IDEA\nCertifications\n•Flutter App Development:Nexskill, Arfa Karim Tower, Lahore\nProficiency in mobile application development with Flutter framework\n•Android Application Development:Nexton, Renala Khurd\nComprehensive skills in creating robust mobile applications for Android platform\n•Office Management, Computer Diploma:Govt. Degree College Okara\nProficiency in essential office administration skills and computer applications\n•Web Programming:UAF Subcampus Depalpur, Okara\nProficiency in developing dynamic and interactive websites\nProjects\n•Slimreset – AI-powered Weight Loss Journey App:\nA mobile application designed to help users track and manage their weight loss journey with\nAI integration. The app provides personalized guidance based on user data and enables doctor\nconsultation.\nTools Used:Flutter, Dart, Riverpod, Hive (local database), REST APIs, Firebase (notifications)\nKey Features:\n- AI-powered personalized health and diet recommendations\n- Daily tracking of meals, calories, proteins, and weight\n- Morning-to-evening lifestyle and diet logging\n- Doctor consultation and contact support\n- Live chat with AI assistant for instant guidance\n•Ohana – Group Money Management App:\nA secure and trusted financial app designed for families, associations, sports clubs, and other groups\nto pool, manage, and track their money collectively. The app ensures safe transactions backed by\nbank insurance, enabling users to save, invest, donate, or spend together with ease.\nTools Used:Flutter, Dart, Riverpod, Dio (REST APIs), Drift (local database), PowerSync (real-\ntime data sync), Auto Route\nKey Contributions:\n- Integrated new REST APIs with Dio for smooth data flow\n- Migrated state management from Provider to Riverpod\n- Implemented Auto Route for scalable and maintainable navigation\n- Enabled real-time group data synchronization using PowerSync\n- Designed secure offline storage with Drift\n•Care and Fit Ecommerce App:\nAn e-commerce platform designed for health and fitness products, featuring seamless API integra-\ntion and a tested mode.\nTools Used:Flutter, Dart, REST APIs, Provider, Dio, Firebase\nStatus:Development and testing completed; soon to be published.\n•Dating App:\nA modern dating platform designed to connect people, offering both free and premium subscription\nplans. Built with Firebase for real-time data management and seamless user experiences.\nTools Used:Flutter, Dart, Provider, Firebase\nKey Features:\n- Free and premium subscription models\n- Real-time messaging and matchmaking\n- Firebase integration for authentication and database management\n•Driver and Truck Dispatch App:\nA streamlined app designed for efficient dispatching of drivers and trucks, featuring an intuitive\nand user-friendly UI.\nTools Used:Flutter, Dart, Provider\nStatus:Development and testing completed; soon to be published.\n•FishPulse App:\nA unique app designed for fish-catching enthusiasts, integrating music.\nTools Used:Flutter, Dart, Provider, GetX, Firebase\nStatus:Development in progress; soon to be uploaded to the Play Store.\n•KUPFSQLite:\nA comprehensive application designed for Hajj booking and managing details, powered by SQLite\nfor local data storage and integrated with APIs for seamless functionality.\nTools Used:Flutter, Dart, REST APIs, Provider, http, SQLite\nKey Features:\n- Hajj booking and management system\n- SQLite for efficient local data storage\n- API integration for real-time updates and synchronization\n•Car Tracking App:\nA real-time vehicle tracking application with speed and location monitoring, featuring Google Maps\nintegration and API support for seamless functionality. Implemented specific features using native\nKotlin code for enhanced performance.\nTools Used:Flutter, Dart, REST APIs, http, Firebase, Kotlin\nKey Features:\n- Real-time car location and speed tracking using Google Maps\n- API integration for data synchronization and updates\n- Native Kotlin integration for optimized features\n- Minimalistic and user-friendly UI design\n•UnStobble App:\nSatisfaction application with features like songs, habits, and alarm management.\nTools Used:Flutter, Dart, REST APIs, Provider, Dio\n•Tahmuh Business & Guest Site Application:\nSpecialized in UI design for managing business.\nTools Used:Flutter, Dart, Provider\nAccomplishments\n•Worked on final-year projects and Codecanyon app reskinning, including:\n- ParkMe Pro (Parking management app)\n- E-Commerce App (Online shopping platform)\n- Online Bus Ticketing App\n- Quiz App\n- WhatsApp Clone UI & Instagram Page UI\nTools Used:Flutter, Dart, Provider, GetX\nEducation History\nUniversity of Agriculture Faisalabad:BS in Computer Science (2020 – 2024)\nGPA: 3.4484/4.0\nCoursework: Computer Architecture, Artificial Intelligence, Networking, Programming Languages (C++,\nJava, Python, C#, PHP, Dart)\nGovt Post Degree College, Okara:FSc Pre-Engineering (2018 – 2020)\nGPA: 659/1000\nCoursework: Physics, Chemistry, Math\nAl-Sadiq Best Way High School, Okara:Matriculation (2016 – 2018)\nGPA: 847/1100\nCoursework: Physics, Chemistry, Math, Biology\n",
+  "ats_score": 71,
+  "passed_ats": false,
+  "detailed_analysis": {
+    "overall_score": 82.4,
+    "word_count": 835,
+    "recommendations": [
+      "Great job! Your resume looks well-optimized for ATS systems."
+    ],
+    "found_keywords": [
+      "Python",
+      "SQL",
+      "project",
+      "team",
+      "problem-solving",
+      "JavaScript",
+      "Java",
+      "API",
+      "database",
+      "Git"
+    ],
+    "missing_keywords": [
+      "machine learning",
+      "React",
+      "Node.js",
+      "Agile"
+    ],
+    "job_category": "general",
+    "format_compatibility": {
+      "score": 100,
+      "feedback": [
+        "Good formatting"
+      ]
+    },
+    "keyword_matching": {
+      "score": 71,
+      "feedback": [
+        "Found 10 relevant keywords"
+      ],
+      "found_keywords": [
+        "Python",
+        "SQL",
+        "project",
+        "team",
+        "problem-solving",
+        "JavaScript",
+        "Java",
+        "API",
+        "database",
+        "Git"
+      ],
+      "missing_keywords": [
+        "machine learning",
+        "React",
+        "Node.js",
+        "Agile"
+      ]
+    },
+    "readability": {
+      "score": 80,
+      "feedback": [
+        "Word count: 835 words"
+      ],
+      "word_count": 835
+    },
+    "structure_organization": {
+      "score": 100,
+      "feedback": [
+        "Good structure"
+      ]
+    },
+    "contact_information": {
+      "score": 100,
+      "feedback": [
+        "Contact info found"
+      ]
+    },
+    "intelligent_agent": {
+      "detected_category": "tech",
+      "category_scores": {
+        "education": 5,
+        "art": 26,
+        "tech": 39,
+        "healthcare": 5,
+        "finance": 2,
+        "marketing": 0,
+        "sales": 0
+      },
+      "found_keywords": [
+        "python",
+        "sql",
+        "api",
+        "javascript",
+        "programming",
+        "java",
+        "git",
+        "software",
+        "developer",
+        "database",
+        "framework"
+      ],
+      "missing_keywords": [
+        "machine learning",
+        "react",
+        "node.js",
+        "coding",
+        "algorithm",
+        "backend",
+        "frontend",
+        "devops"
+      ],
+      "keyword_match_percentage": 57.9,
+      "recommendations": [],
+      "total_keywords_in_category": 19,
+      "found_keywords_count": 11
+    },
+    "detected_category": "tech",
+    "agent_recommendations": []
+  },
+  "company_evaluation": {
+    "final_score": 42.1,
+    "ats_compatibility": 71,
+    "keyword_relevance": 9.3,
+    "experience_level": 50,
+    "education_background": 50,
+    "skills_match": 9.3,
+    "passes_criteria": false,
+    "required_keywords_found": 2,
+    "required_keywords_total": 15,
+    "preferred_keywords_found": 0,
+    "preferred_keywords_total": 0,
+    "minimum_ats_score": 60
+  },
+  "passes_company_screening": false,
+  "processing_time": 0.2,
+  "email_sent": true,
+  "timestamp": 1758258793.7962337
+}

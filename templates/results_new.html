@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATS Analysis Results - {{ filename }}</title>
+    <title>{{ company_name }} - CV Screening Results for {{ filename }}</title>
     <style>
         * {
             margin: 0;
@@ -370,34 +370,61 @@
     <div class="container">
         <div class="results-card">
             <div class="header">
-                <h1>📊 Resume Analysis Results</h1>
-                <p>Analysis for: <strong>{{ filename }}</strong></p>
+                <h1>🏢 {{ company_name }} - CV Screening Results</h1>
+                <p>Evaluation for: <strong>{{ filename }}</strong></p>
             </div>
 
             <!-- File Information -->
             <div class="file-info">
                 <strong>📄 File Details:</strong>
                 {% if user_name %}Name: {{ user_name }} | {% endif %}
+                {% if user_email %}Email: {{ user_email }} | {% endif %}
                 Category: {{ job_category.title() }} | 
                 Size: {{ file_size_mb }}MB | 
                 Processing Time: {{ processing_time }}s
+                {% if user_email %}
+                    {% if email_sent %}
+                        <br><span style="color: #28a745;">✅ Email report sent successfully</span>
+                    {% else %}
+                        <br><span style="color: #dc3545;">❌ Email report could not be sent</span>
+                    {% endif %}
+                {% endif %}
             </div>
 
-            <!-- ATS Status Banner -->
-            {% if passed_ats %}
+            <!-- Company Screening Status Banner -->
+            {% if passes_company_screening %}
                 <div class="status-banner status-pass">
                     <div class="status-icon">🎉</div>
-                    <div>Congratulations! Your resume is ATS-friendly!</div>
+                    <div>Congratulations! Your CV has been approved by {{ company_name }}!</div>
                     <div style="font-size: 1rem; margin-top: 0.5rem; opacity: 0.9;">
-                        Your resume scored {{ ats_score }}/100 and meets ATS requirements.
+                        Your CV scored {{ company_evaluation.final_score }}/100 and meets our hiring criteria.
                     </div>
                 </div>
             {% else %}
                 <div class="status-banner status-fail">
-                    <div class="status-icon">⚠️</div>
-                    <div>Your resume needs improvement for ATS compatibility</div>
+                    <div class="status-icon">📋</div>
+                    <div>Your CV does not currently meet our hiring criteria</div>
                     <div style="font-size: 1rem; margin-top: 0.5rem; opacity: 0.9;">
-                        Your resume scored {{ ats_score }}/100. Follow the guide below to improve.
+                        Your CV scored {{ company_evaluation.final_score }}/100. Minimum required: 60/100.
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- ATS Status Banner -->
+            {% if passed_ats %}
+                <div class="status-banner" style="background: linear-gradient(135deg, #3498db, #2980b9); color: white; margin-top: 1rem;">
+                    <div class="status-icon">📊</div>
+                    <div>ATS Compatibility: Excellent</div>
+                    <div style="font-size: 1rem; margin-top: 0.5rem; opacity: 0.9;">
+                        Your CV scored {{ ats_score }}/100 for ATS compatibility.
+                    </div>
+                </div>
+            {% else %}
+                <div class="status-banner" style="background: linear-gradient(135deg, #f39c12, #e67e22); color: white; margin-top: 1rem;">
+                    <div class="status-icon">⚠️</div>
+                    <div>ATS Compatibility: Needs Improvement</div>
+                    <div style="font-size: 1rem; margin-top: 0.5rem; opacity: 0.9;">
+                        Your CV scored {{ ats_score }}/100 for ATS compatibility.
                     </div>
                 </div>
             {% endif %}
@@ -405,20 +432,81 @@
             <!-- Score Display -->
             <div class="score-display">
                 <div class="score-circle 
-                    {% if ats_score >= 85 %}score-excellent
-                    {% elif ats_score >= 70 %}score-good
-                    {% elif ats_score >= 55 %}score-average
+                    {% if company_evaluation.final_score >= 80 %}score-excellent
+                    {% elif company_evaluation.final_score >= 60 %}score-good
+                    {% elif company_evaluation.final_score >= 40 %}score-average
                     {% else %}score-poor
                     {% endif %}">
-                    {{ ats_score }}/100
+                    {{ company_evaluation.final_score }}/100
                 </div>
+                <p><strong>{{ company_name }} Hiring Score</strong></p>
                 <p>
-                    {% if ats_score >= 85 %}Excellent ATS Compatibility
-                    {% elif ats_score >= 70 %}Good ATS Compatibility
-                    {% elif ats_score >= 55 %}Average ATS Compatibility
-                    {% else %}Poor ATS Compatibility
+                    {% if company_evaluation.final_score >= 80 %}Excellent Match
+                    {% elif company_evaluation.final_score >= 60 %}Good Match
+                    {% elif company_evaluation.final_score >= 40 %}Average Match
+                    {% else %}Needs Improvement
                     {% endif %}
                 </p>
+            </div>
+
+            <!-- Company Evaluation Breakdown -->
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>🏢 Company Criteria</h3>
+                    <div class="score-bar">
+                        {% set company_color = "#ef4444" %}
+                        {% if company_evaluation.final_score >= 60 %}
+                            {% set company_color = "#10b981" %}
+                        {% elif company_evaluation.final_score >= 40 %}
+                            {% set company_color = "#f59e0b" %}
+                        {% endif %}
+                        <div class="score-fill" style="width: {{ company_evaluation.final_score }}%; background: {{ company_color }};"></div>
+                    </div>
+                    <p>{{ company_evaluation.final_score }}/100</p>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>📊 ATS Compatibility</h3>
+                    <div class="score-bar">
+                        {% set ats_color = "#ef4444" %}
+                        {% if company_evaluation.ats_compatibility >= 70 %}
+                            {% set ats_color = "#10b981" %}
+                        {% elif company_evaluation.ats_compatibility >= 50 %}
+                            {% set ats_color = "#f59e0b" %}
+                        {% endif %}
+                        <div class="score-fill" style="width: {{ company_evaluation.ats_compatibility }}%; background: {{ ats_color }};"></div>
+                    </div>
+                    <p>{{ company_evaluation.ats_compatibility }}/100</p>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>🔑 Keyword Match</h3>
+                    <div class="score-bar">
+                        {% set keyword_color = "#ef4444" %}
+                        {% if company_evaluation.keyword_relevance >= 70 %}
+                            {% set keyword_color = "#10b981" %}
+                        {% elif company_evaluation.keyword_relevance >= 40 %}
+                            {% set keyword_color = "#f59e0b" %}
+                        {% endif %}
+                        <div class="score-fill" style="width: {{ company_evaluation.keyword_relevance }}%; background: {{ keyword_color }};"></div>
+                    </div>
+                    <p>{{ company_evaluation.keyword_relevance }}/100</p>
+                </div>
+
+                <div class="analysis-card">
+                    <h3>📋 Requirements Met</h3>
+                    <div class="score-bar">
+                        {% set req_percentage = (company_evaluation.required_keywords_found / company_evaluation.required_keywords_total * 100) | round %}
+                        {% set req_color = "#ef4444" %}
+                        {% if req_percentage >= 70 %}
+                            {% set req_color = "#10b981" %}
+                        {% elif req_percentage >= 40 %}
+                            {% set req_color = "#f59e0b" %}
+                        {% endif %}
+                        <div class="score-fill" style="width: {{ req_percentage }}%; background: {{ req_color }};"></div>
+                    </div>
+                    <p>{{ company_evaluation.required_keywords_found }}/{{ company_evaluation.required_keywords_total }} Required</p>
+                </div>
             </div>
 
             <!-- Detailed Analysis -->
